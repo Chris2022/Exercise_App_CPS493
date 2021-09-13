@@ -10,15 +10,15 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar" role="navigation" aria-label="main navigation" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
             <div class="navbar-brand">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" >
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-menu" :class="{'is-active': navBarIsActive}">
                 <div class="navbar-start">
                     <a class="navbar-item; is-size-3" href="index.html">
                         Fitness App
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="navbar-item is-hoverable">
-                        <a class="navbar-itemb                                      ">Progress</a>
+                        <a class="navbar-item ">Progress</a>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
@@ -76,10 +76,10 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-link">
+                            <a class="button is-link" href="signup.html">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light">
+                            <a class="button is-light" href="login.html">
                                 Log in
                             </a>
                         </div>
@@ -88,5 +88,36 @@
             </div>
         </nav>
     </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+
+        const VM = {
+            data() {
+                return {
+                    counter: 3,
+                    now: new Date().toLocaleString(),
+                    visible: true,
+                    navBarIsActive:false,
+                }
+            },
+            mounted() {
+                setInterval(() => this.now = new Date().toLocaleString() , 1000)
+            },
+            methods: {
+                grow(){
+                    this.counter += 10;
+                },
+                close(){
+                    this.visible = false;
+                }
+            }
+        }
+        Vue.createApp(VM).mount('.container')
+        //mount on the HTML
+        //VUE system then matches the html
+        //all you do is change this data
+        //any changes the system will do it, you do not change the html
+        //you only work with the JS.
+    </script>
 </body>
 </html>
