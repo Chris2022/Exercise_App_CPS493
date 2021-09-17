@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-    <title>Fitness Tracker</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="footer.css">
+    <title>Fit Bud</title>
 </head>
 <body>
     <div class="container">
@@ -21,7 +22,7 @@
             <div class="navbar-menu" :class="{'is-active': navBarIsActive}">
                 <div class="navbar-start">
                     <a class="navbar-item; is-size-3" href="index.html">
-                        <img src="FitBud.png" width="150" height="50">
+                        <img src="FitBud.png" width="200" height="10">
                     </a>
                     <a class="navbar-item" href="about.html">
                         About
@@ -37,7 +38,7 @@
                         </div>
                     </div>
                     <div class="navbar-item is-hoverable">
-                        <a class="navbar-item ">Progress</a>
+                        <a class="navbar-item" href="progress.html">Progress</a>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
@@ -119,5 +120,12 @@
         //any changes the system will do it, you do not change the html
         //you only work with the JS.
     </script>
+<footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+          <div class="center grey-text"><strong>Fit Bud</strong> &copy;2021. All Rights Reserved.</div>
+      </p>
+    </div>
+</footer>
 </body>
 </html>
