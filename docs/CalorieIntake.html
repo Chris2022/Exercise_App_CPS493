@@ -10,89 +10,91 @@
     <title>Calorie Intake</title>
 </head>
 <body>
-<div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item; is-size-3" href="index.html">
-                    <img src="FitBud.png" width="200" height="50">
+    <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
-                <a class="navbar-item" href="about.html">
-                    About
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Nutrition
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-link" href="recipes.html">
-                            Recipes
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item is-hoverable">
-                    <a class="navbar-item ">Progress</a>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Workouts
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item" href="push.html">
-                            Push Workouts
-                        </a>
-                        <a class="navbar-item" href="pull.html">
-                            Pull Workouts
-                        </a>
-                        <a class="navbar-item" href="leg.html">
-                            Leg Workouts
-                        </a>
-                        <a class="navbar-item" href="cardio.html">
-                            HITT Workouts
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Journal
-                    </a>
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            Log Daily workout
-                        </a>
-                        <a class="navbar-item">
-                            Log Calorie Intake
-                        </a>
-                    </div>
-                </div>
             </div>
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <span :title="message">
+                        <a class="navbar-item; is-size-3" href="index.html">
+                            <img src="FitBud.png" width="200" height="10">
+                        </a>
+                    </span>
+                    <a class="navbar-item" href="about.html">
+                        About
+                    </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Nutrition
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="recipes.html">
+                                Recipes
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item is-hoverable">
+                        <a class="navbar-item" href="progress.html">Progress</a>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Workouts
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="push.html">
+                                Push Workouts
+                            </a>
+                            <a class="navbar-item" href="pull.html">
+                                Pull Workouts
+                            </a>
+                            <a class="navbar-item" href="leg.html">
+                                Leg Workouts
+                            </a>
+                            <a class="navbar-item" href="cardio.html">
+                                HITT Workouts
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            Journal
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="DailyWorkout.html">
+                                Log Daily workout
+                            </a>
+                            <a class="navbar-item" href="CalorieIntake.html">
+                                Log Calorie Intake
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-link" href="signup.html">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light" href="login.html">
-                            Log in
-                        </a>
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a class="button is-link" href="signup.html">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light" href="login.html">
+                                Log in
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>
-</div>
+        </nav>
+    </div>
 <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <div class="center grey-text"><strong>Fit Bud</strong> &copy;2021 .</div>
+        <div class="center grey-text"><strong>Fit Bud</strong> &copy;2021. All Rights Reserved.</div>
     </p>
     </div>
 </footer>

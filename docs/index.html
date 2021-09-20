@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar" role="navigation" aria-label="main navigation" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" >
                     <span aria-hidden="true"></span>
@@ -19,11 +19,13 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div class="navbar-menu" :class="{'is-active': navBarIsActive}">
+            <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item; is-size-3" href="index.html">
-                        <img src="FitBud.png" width="200" height="10">
-                    </a>
+                    <span :title="message">
+                        <a class="navbar-item; is-size-3" href="index.html">
+                            <img src="FitBud.png" width="200" height="10">
+                        </a>
+                    </span>
                     <a class="navbar-item" href="about.html">
                         About
                     </a>
@@ -36,9 +38,9 @@
                                 Recipes
                             </a>
                         </div>
-                        <div class="navbar-item is-hoverable">
-                            <a class="navbar-item" href="progress.html">Progress</a>
-                        </div>
+                    </div>
+                    <div class="navbar-item is-hoverable">
+                        <a class="navbar-item" href="progress.html">Progress</a>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
@@ -64,10 +66,10 @@
                             Journal
                         </a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="DailyWorkout.html">
                                 Log Daily workout
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="CalorieIntake.html">
                                 Log Calorie Intake
                             </a>
                         </div>
@@ -95,30 +97,11 @@
         const VM = {
             data() {
                 return {
-                    counter: 3,
-                    now: new Date().toLocaleString(),
-                    visible: true,
-                    navBarIsActive:false,
-                }
-            },
-            mounted() {
-                setInterval(() => this.now = new Date().toLocaleString() , 1000)
-            },
-            methods: {
-                grow(){
-                    this.counter += 10;
-                },
-                close(){
-                    this.visible = false;
+                    message: 'Fit Bud \nFit-Bud.com'
                 }
             }
         }
         Vue.createApp(VM).mount('.container')
-        //mount on the HTML
-        //VUE system then matches the html
-        //all you do is change this data
-        //any changes the system will do it, you do not change the html
-        //you only work with the JS.
     </script>
 <footer class="footer">
     <div class="content has-text-centered">
