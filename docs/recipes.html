@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">   
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"> 
     <title>Recipes </title>
 </head>
 <body>
@@ -27,22 +27,22 @@
                     <a class="navbar-item" href="about.html">
                         About
                     </a>
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable" onclick="show()">
                         <a class="navbar-link is-arrowless">
                             Nutrition
                         </a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="recipes.html"> 
+                        <div class="navbar-dropdown" id="hidden-mobile" >
+                            <a class="navbar-item" href="recipes.html" > 
                                 Recipes
                             </a>
                         </div>
                     </div>
                     <a class="navbar-item" href="progress.html">Progress</a>
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable"  onclick="displayWorkout()">
                         <a class="navbar-link is-arrowless">
                             Workouts
                         </a>
-                        <div class="navbar-dropdown">
+                        <div class="navbar-dropdown" id="hidden-mobile-workout">
                             <a class="navbar-item" href="push.html">
                                 Push Workouts
                             </a>
@@ -53,15 +53,15 @@
                                 Leg Workouts
                             </a>
                             <a class="navbar-item" href="cardio.html">
-                                HITT Workouts
+                                HIIT Workouts
                             </a>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable" onclick="showJournal()">
                         <a class="navbar-link is-arrowless">
                             Journal
                         </a>
-                        <div class="navbar-dropdown">
+                        <div class="navbar-dropdown" id="hidden-mobile-journal">
                             <a class="navbar-item" href="DailyWorkout.html">
                                 Log Daily workout
                             </a>
@@ -87,6 +87,7 @@
             </div>
         </nav>
     </div>
+    <script src="../index.js"></script>
 <section class="section">
     <h1 class="title">Recipes</h1>
     <h2 class="subtitle">

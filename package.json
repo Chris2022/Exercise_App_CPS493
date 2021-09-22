@@ -1,0 +1,21 @@
+{
+  "name": "exercise_app_cps493",
+  "version": "1.0.0",
+  "description": "***This is the exercise app that I will be working on for the Fall 2021 Semester in CPS 493: Web Programming***",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chris2022/Exercise_App_CPS493.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express":"4.17.1"
+  }
+}
