@@ -12,3 +12,11 @@
     margin-right: auto;
     width: 30%;
   }
+#Sign-up-button{
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #hidden-mobile,#hidden-mobile-workout,#hidden-mobile-journal {
+    display:none;
+  }
+}

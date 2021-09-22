@@ -13,37 +13,33 @@
     <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" >
+                <a class="navbar-item; is-size-3" href="index.html" :title="message">
+                    <img src="FitBud.png" width="175" height="10">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div class="navbar-menu">
+            <div class="navbar-menu" :class="{'is-active': navBarIsActive}">
                 <div class="navbar-start">
-                    <span :title="message">
-                        <a class="navbar-item; is-size-3" href="index.html">
-                            <img src="FitBud.png" width="200" height="10">
-                        </a>
-                    </span>
                     <a class="navbar-item" href="about.html">
                         About
                     </a>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a class="navbar-link is-arrowless">
                             Nutrition
                         </a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="recipes.html">
+                            <a class="navbar-item" href="recipes.html"> 
                                 Recipes
                             </a>
                         </div>
                     </div>
-                    <div class="navbar-item is-hoverable">
-                        <a class="navbar-item" href="progress.html">Progress</a>
-                    </div>
+                    <a class="navbar-item" href="progress.html">Progress</a>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a class="navbar-link is-arrowless">
                             Workouts
                         </a>
                         <div class="navbar-dropdown">
@@ -62,7 +58,7 @@
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
+                        <a class="navbar-link is-arrowless">
                             Journal
                         </a>
                         <div class="navbar-dropdown">
@@ -91,6 +87,12 @@
             </div>
         </nav>
     </div>
+    <section class="section">
+        <h1 class="title">Push Workouts</h1>
+        <h2 class="subtitle">
+            In need of a push workout, here are some to help you out.
+        </h2>
+    </section>
 <footer class="footer">
     <div class="content has-text-centered">
       <p>
