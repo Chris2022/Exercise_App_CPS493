@@ -12,8 +12,29 @@
     margin-right: auto;
     width: 30%;
   }
+#calorie{
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#check{
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  
+}
 #Sign-up-button{
   text-align: center;
+}
+.select{
+  width: 100%;
+}
+#workout{
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 767px) {
   #hidden-mobile,#hidden-mobile-workout,#hidden-mobile-journal {
