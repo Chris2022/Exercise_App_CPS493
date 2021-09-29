@@ -89,16 +89,12 @@
     </div>
     <script src="../index.js"></script>
 <div id="check" style="position: relative; width:1000px; margin-left: auto; text-align: left;">
-    <div v-if="errors.length > 0">
-        <ul>
-            <li v-for="err in errors" style="color: red;">{{err}}</li>
-        </ul>
-    </div>
     <form class="box" style="width: 50%; text-align: center" @submit.prevent="checkForm" autocomplete="off">
         <div class="field" style="text-align: center;">
             <label class="label">Username</label> 
             <div class="control">
                 <input v-model="username" id="username" class="input" type="text" placeholder="e.g. alex1234">
+                <p v-if="errors.length>0" id="error-message">{{errors[0]}}</p>
             </div>
         </div>
 
@@ -106,10 +102,11 @@
             <label class="label">Password</label>
             <div class="control">
                 <input v-model="password" id="password" class="input"type="password" placeholder="********">
+                <p v-if="errors.length>0" id="error-message">{{errors[1]}}</p>
             </div>
         </div>
 
-        <button class="button is-link">Log in</button>
+        <button class="button is-link" @click="sign" id="logged">Log in</button>
     </form>
 </div>
 <script src="https://unpkg.com/vue@next"></script>
@@ -117,6 +114,7 @@
     const VM = {
         data() {
             return {
+                name: 'welcome',
                 username : '',
                 password :'',
                 errors: []
@@ -129,10 +127,16 @@
                 }
                 this.errors = []
                 if(!this.username){
-                    this.errors.push("Name Required")
+                    this.errors.push("*Name Required")
                 }
                 if(!this.password){
-                    this.errors.push("Password Required")
+                    this.errors.push("*Password Required")
+                }
+            },
+            sign(event){
+                if(this.checkForm()){
+                    alert(this.name + ' We are pleased you are here.')
+                    
                 }
             }
         }

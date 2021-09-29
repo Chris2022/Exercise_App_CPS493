@@ -24,7 +24,7 @@
   position: relative;
   
 }
-.error-message{
+#error-message{
   color:red;
 }
 #Sign-up-button{
