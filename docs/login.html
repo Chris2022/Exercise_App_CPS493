@@ -88,25 +88,57 @@
         </nav>
     </div>
     <script src="../index.js"></script>
-<section style="position: relative; width:1000px; margin-left: auto; text-align: left;">
-    <form class="box" style="width: 50%; text-align: center">
+<div id="check" style="position: relative; width:1000px; margin-left: auto; text-align: left;">
+    <div v-if="errors.length > 0">
+        <ul>
+            <li v-for="err in errors" style="color: red;">{{err}}</li>
+        </ul>
+    </div>
+    <form class="box" style="width: 50%; text-align: center" @submit.prevent="checkForm" autocomplete="off">
         <div class="field" style="text-align: center;">
-            <label class="label">Username</label>
+            <label class="label">Username</label> 
             <div class="control">
-                <input class="input" type="text" placeholder="e.g. alex1234">
+                <input v-model="username" id="username" class="input" type="text" placeholder="e.g. alex1234">
             </div>
         </div>
 
         <div class="field" style="text-align: center">
             <label class="label">Password</label>
             <div class="control">
-                <input class="input" type="password" placeholder="********">
+                <input v-model="password" id="password" class="input"type="password" placeholder="********">
             </div>
         </div>
 
         <button class="button is-link">Log in</button>
     </form>
-</section>
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const VM = {
+        data() {
+            return {
+                username : '',
+                password :'',
+                errors: []
+            }
+        },
+        methods:{
+            checkForm(){
+                if(this.username && this.password){
+                    return true
+                }
+                this.errors = []
+                if(!this.username){
+                    this.errors.push("Name Required")
+                }
+                if(!this.password){
+                    this.errors.push("Password Required")
+                }
+            }
+        }
+    }
+    Vue.createApp(VM).mount('#check')
+</script>
 <footer class="footer">
     <div class="content has-text-centered">
       <p>
