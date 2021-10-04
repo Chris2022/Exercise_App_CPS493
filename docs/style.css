@@ -49,6 +49,9 @@ body{
 #error-message{
   color:red;
 }
+.recipes{
+  text-align: center;
+}
 #Sign-up-button{
   text-align: center;
 }
@@ -60,6 +63,9 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.workouts{
+  text-align: center;
 }
 @media (max-width: 767px) {
   #hidden-mobile,#hidden-mobile-workout,#hidden-mobile-journal {
