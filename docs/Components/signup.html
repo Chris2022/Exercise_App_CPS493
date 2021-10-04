@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
     <title>Sign-Up</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item; is-size-3" href="index.html" :title="message">
-                    <img src="FitBud.png" width="175" height="10">
+                    <img src="../assets/FitBud.png" width="175" height="10">
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
                     <span aria-hidden="true"></span>
@@ -33,8 +33,11 @@
                             Nutrition
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile" >
-                            <a class="navbar-item" href="recipes.html" > 
-                                Recipes
+                            <a class="navbar-item" href="weightLossRecipes.html" > 
+                                Recipes for Weight Loss
+                            </a>
+                            <a class="navbar-item" href="proteinRecipes.html" > 
+                                Recipes to Gain Muscle
                             </a>
                         </div>
                     </div>
