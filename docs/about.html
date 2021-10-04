@@ -100,13 +100,26 @@
             </div>
         </nav>
     </div>
-    <script src="../index.js"></script>
 <section class="section">
     <h1 class="title">About Fit Bud</h1>
     <h2 class="subtitle">
       Fit-Bud helps your journey to either weight loss, muscular gains, or just live a healthier life style.
     </h2>
 </section>
+<script src="../index.js"></script>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const VM = {
+        data() {
+            return {
+                message: 'Fit Bud \nFit-Bud.com',
+                navBarIsActive:false,
+                ishidden:true,
+            }
+        }
+    }
+    Vue.createApp(VM).mount('.container')
+</script>
 <footer class="footer">
     <div class="content has-text-centered">
       <p>

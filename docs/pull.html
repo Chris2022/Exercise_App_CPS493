@@ -124,6 +124,19 @@
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const VM = {
+          data() {
+                return {
+                    message: 'Fit Bud \nFit-Bud.com',
+                    navBarIsActive:false,
+                    ishidden:true,
+                }
+            }
+        }
+        Vue.createApp(VM).mount('.container')
+</script>  
 <footer class="footerwrap">
     <div class="content has-text-centered">
       <p class="footertxt">

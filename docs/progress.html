@@ -113,6 +113,19 @@
             <progress class="progress is-info" value="78" max="100">45%</progress>
         </div>
     </section>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const VM = {
+          data() {
+                return {
+                    message: 'Fit Bud \nFit-Bud.com',
+                    navBarIsActive:false,
+                    ishidden:true,
+                }
+            }
+        }
+        Vue.createApp(VM).mount('.container')
+</script>  
 <footer class="footer">
     <div class="content has-text-centered">
       <p>

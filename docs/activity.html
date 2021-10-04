@@ -107,6 +107,19 @@
         Share your fitness progress and/or view your friends progress.
     </h2>
 </section>
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const VM = {
+        data() {
+            return {
+                message: 'Fit Bud \nFit-Bud.com',
+                navBarIsActive:false,
+                ishidden:true,
+            }
+        }
+    }
+    Vue.createApp(VM).mount('.container')
+</script>
 <footer class="footer">
     <div class="content has-text-centered">
       <p>
