@@ -97,10 +97,48 @@
     </div>
     <script src="../index.js"></script>
 <section class="section">
-    <h1 class="title">About Fit Bud</h1>
+    <h1 class="title">Friends</h1>
     <h2 class="subtitle">
-      Fit-Bud helps your journey to either weight loss, muscular gains, or just live a healthier life style.
+        Meet new Friends , or view existing ones.
     </h2>
+    <div id="tabs-with-content">
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth is-medium">
+                    <div class="container">
+                      <ul>
+                        <li class="tab is-active" onclick="openTab(event,'friends')"><a >Friends</a></li>
+                        <li class="tab " onclick="openTab(event,'requests')"><a >Requests</a></li>
+                        <li class="tab" onclick="openTab(event,'discover')"><a >Discover</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+              </div>
+        <div>
+        <div class="content-tab" style="display: none;" id="friends">
+            <ul class="friendsList">
+                <li>George Lopez</li>
+                <li>Billy Graham</li>
+                <li>William Arnold</li>
+                <li>Bob Stevens</li>
+                <li>Calvin Jones</li>
+                <li>Christina Presutti</li>
+                <li>Cindy Trice</li>
+            </ul>
+        </div>
+        <div class="content-tab" style= "display: none;" id="requests">
+            <ul class="friendsList">
+                <li>Tracy Lindell</li>
+                <li>Andrew Harris</li>
+            </ul>
+        </div>
+        <div class="content-tab" style="display: none;" id="discover">
+            <ul class="friendsList">
+                <li>Stacy Lewis</li>
+                <li>Trinidad Shameer</li>
+                <li>Luis Alvarez</li>
+            </ul>
+        </div>
+      </div>
 </section>
 <footer class="footer">
     <div class="content has-text-centered">
