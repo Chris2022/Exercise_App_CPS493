@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon.png">
     <link rel="stylesheet" type="text/css" media="screen" href="../style.css">
-    <title>Login</title>
+    <title>Friends</title>
 </head>
 <body>
     <div class="container">
@@ -96,61 +96,12 @@
         </nav>
     </div>
     <script src="../index.js"></script>
-<div id="check" style="position: relative; width:1000px; margin-left: auto; text-align: left;">
-    <form class="box" style="width: 50%; text-align: center" @submit.prevent="checkForm" autocomplete="off">
-        <div class="field" style="text-align: center;">
-            <label class="label">Username</label> 
-            <div class="control">
-                <input v-model="username" id="username" class="input" type="text" placeholder="e.g. alex1234">
-                <p v-if="errors.length>0" id="error-message">{{errors[0]}}</p>
-            </div>
-        </div>
-
-        <div class="field" style="text-align: center">
-            <label class="label">Password</label>
-            <div class="control">
-                <input v-model="password" id="password" class="input"type="password" placeholder="********">
-                <p v-if="errors.length>0" id="error-message">{{errors[1]}}</p>
-            </div>
-        </div>
-
-        <button class="button is-link" @click="sign" id="logged">Log in</button>
-    </form>
-</div>
-<script src="https://unpkg.com/vue@next"></script>
-<script>
-    const VM = {
-        data() {
-            return {
-                name: 'welcome',
-                username : '',
-                password :'',
-                errors: []
-            }
-        },
-        methods:{
-            checkForm(){
-                if(this.username && this.password){
-                    return true
-                }
-                this.errors = []
-                if(!this.username){
-                    this.errors.push("*Name Required")
-                }
-                if(!this.password){
-                    this.errors.push("*Password Required")
-                }
-            },
-            sign(event){
-                if(this.checkForm()){
-                    alert(this.name + ' We are pleased you are here.')
-                    
-                }
-            }
-        }
-    }
-    Vue.createApp(VM).mount('#check')
-</script>
+<section class="section">
+    <h1 class="title">About Fit Bud</h1>
+    <h2 class="subtitle">
+      Fit-Bud helps your journey to either weight loss, muscular gains, or just live a healthier life style.
+    </h2>
+</section>
 <footer class="footer">
     <div class="content has-text-centered">
       <p>
