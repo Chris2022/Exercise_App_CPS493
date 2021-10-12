@@ -31,5 +31,7 @@ export default {
 </script>
 
 <style>
-
+.workouts{
+  text-align: center;
+}
 </style>

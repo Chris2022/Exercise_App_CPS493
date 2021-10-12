@@ -1,7 +1,7 @@
 <template>
   <section class="section">
-    <h1 class="title">Recipes for Weight Loss</h1>
-    <h2 class="subtitle">
+    <h1 class="title" id="header">Recipes for Weight Loss</h1>
+    <h2 class="subtitle" id="header">
         If you're looking to lose weight while eating delicious food, check some of these
         recipes out!
     </h2>
@@ -46,5 +46,10 @@ export default {
 </script>
 
 <style>
-
+#header{
+    text-align: center;
+}
+.recipes{
+  text-align: center;
+}
 </style>

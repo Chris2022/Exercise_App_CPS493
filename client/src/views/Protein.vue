@@ -1,7 +1,7 @@
 <template>
 <section class="section">
-    <h1 class="title">High Protein Recipes</h1>
-    <h2 class="subtitle">
+    <h1 class="title" id="header">High Protein Recipes</h1>
+    <h2 class="subtitle" id="header">
         If you're looking at making some serious gains and seek to increase muscle mass, check some of these
         high protein recipes!
     </h2>
@@ -55,5 +55,10 @@ export default {
 </script>
 
 <style>
-
+#header{
+    text-align: center;
+}
+.recipes{
+  text-align: center;
+}
 </style>
