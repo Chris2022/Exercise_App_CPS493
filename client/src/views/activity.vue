@@ -1,5 +1,5 @@
 <template>
-<section class="section" style="text-align: center;">
+<section class="section" id="activity">
     <h1 class="title">Activity Feed</h1>
     <h2 class="subtitle">    
         Whats new ?
@@ -13,7 +13,7 @@
         </figure>
         <div class="media-content">
           <div class="content">
-            <p>
+            <p id="post">
               <strong>John Smith</strong> <small>@johnsmith</small> <small>23m</small>
               <br>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
@@ -46,7 +46,7 @@
         </figure>
         <div class="media-content">
           <div class="content">
-            <p>
+            <p id="post">
               <strong>Kelly Stoves</strong> <small>@K_Stoves</small> <small>32m</small>
               <br>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
@@ -79,7 +79,7 @@
         </figure>
         <div class="media-content">
           <div class="content">
-            <p>
+            <p id="post">
               <strong>Jakob Owens</strong> <small>@jakob_owens</small> <small>37m</small>
               <br>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
@@ -112,7 +112,7 @@
         </figure>
         <div class="media-content">
           <div class="content">
-            <p>
+            <p id="post">
               <strong>Jessica Ross</strong> <small>@jessRoss</small> <small>44m</small>
               <br>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
@@ -147,5 +147,10 @@ export default {
 </script>
 
 <style>
-
+#activity{
+  text-align: center;
+}
+#post{
+  text-align: left;
+}
 </style>
