@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon.png">
-    <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
-    <title>Fit Bud</title>
-</head>
-<body>
-    <div class="container">
+<template>
+<div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item; is-size-3" href="index.html" :title="message">
-                    <img src="./assets/FitBud.png" width="175" height="10">
+                    <img src="../assets/FitBud.png" width="175" height="10">
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
                     <span aria-hidden="true"></span>
@@ -83,59 +72,32 @@
                             Activity
                         </a>
                     </div>
+                </div>
 
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-link" href="signup.html">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a class="button is-light" href="login.html">
-                                Log in
-                            </a>
-                        </div>
+                        <login-badge />
                     </div>
                 </div>
             </div>
         </nav>
     </div>
-    <section class="section" style="text-align: center;">
-        <section class="hero is-link">
-            <h1 class="title">BE THE BEST YOU</h1>
-        </section>
-        <h2 class="subtitle">
-            <strong>Take</strong> control of your goals.<br> 
-            <strong>Track</strong> calories. <br>
-            <strong>Break down</strong> ingredients.<br>
-            <strong>Log activities</strong><br> 
-            All with <strong>Fit Bud</strong>.
-        </h2>
-    </section>
-    <div>
-        <figure>
-            <img src="https://media.istockphoto.com/photos/calories-counting-diet-food-control-and-weight-loss-concept-calorie-picture-id1259984250?b=1&k=20&m=1259984250&s=170667a&w=0&h=vGSS9ZnaRPgR90BCxVz_mgWePp9cfwH6U1KAu1_as-c=" width="500" height="600" class="center" alt="picture of food">
-        </figure>
-    </div>
-    <script src="../index.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
-    <script>
-        const VM = {
-            data() {
-                return {
-                    message: 'Fit Bud \nFit-Bud.com',
-                    navBarIsActive:false,
-                    ishidden:true,
-                }
-            }
+</template>
+
+<script>
+import LoginBadge from './LoginBadge.vue';
+export default {
+    data(){
+        return {
+            isActive: false
         }
-        Vue.createApp(VM).mount('.container')
-    </script>
-<footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-          <div class="center grey-text"><strong>Fit Bud</strong> &copy;2021. All Rights Reserved.</div>
-      </p>
-    </div>
-</footer>
-</body>
-</html>
+    },
+    components: {
+        LoginBadge
+    }
+}
+</script>
+
+<style>
+
+</style>

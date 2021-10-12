@@ -1,5 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Session from '../services/session';
+import Home from '../views/Home.vue';
+import activity from '../views/activity.vue'
 
 const routes = [
   {
@@ -8,12 +10,65 @@ const routes = [
     component: Home
   },
   {
+    path:'/',
+    name: 'activity',
+    component: activity,
+    meta: { requiresLogin: true }
+  },
+  {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/calories',
+    name: 'calories',
+    component: () => import(/* webpackChunkName: "about" */ '../views/calories.vue')
+  },
+  {
+    path: '/cardio',
+    name: 'cardio',
+    component: () => import(/* webpackChunkName: "about" */ '../views/cardio.vue')
+  },
+  {
+    path: '/DailyWorkout',
+    name: 'DailyWorkout',
+    component: () => import(/* webpackChunkName: "about" */ '../views/DailyWorkout.vue')
+  },
+  {
+    path: '/Friends',
+    name: 'Friends',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Friends.vue')
+  },
+  {
+    path: '/Leg',
+    name: 'Leg',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Leg.vue')
+  },
+  {
+    path: '/Progress',
+    name: 'Progress',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Progress.vue')
+  },
+  {
+    path: '/Protein',
+    name: 'Protein',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Protein.vue')
+  },
+  {
+    path: '/Pull',
+    name: 'Pull',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Pull.vue')
+  },
+  {
+    path: '/Push',
+    name: 'Push',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Push.vue')
+  },
+  {
+    path: '/weightloss',
+    name: 'weightloss',
+    component: () => import(/* webpackChunkName: "about" */ '../views/weightloss.vue')
   }
 ]
 
@@ -22,4 +77,11 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if(to.meta.requiresLogin && !Session.user){
+      next('/login');
+  }else{
+      next();
+  }
+} )
 export default router
