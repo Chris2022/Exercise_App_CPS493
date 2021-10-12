@@ -10,10 +10,10 @@ const routes = [
     component: Home
   },
   {
-    path:'/',
+    path:'/activity',
     name: 'activity',
     component: activity,
-    meta: { requiresLogin: true }
+    // meta: { requiresLogin: true }
   },
   {
     path: '/about',
@@ -69,6 +69,16 @@ const routes = [
     path: '/weightloss',
     name: 'weightloss',
     component: () => import(/* webpackChunkName: "about" */ '../views/weightloss.vue')
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => import(/* webpackChunkName: "about" */ '../views/signup.vue')
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import(/* webpackChunkName: "about" */ '../views/login.vue')
   }
 ]
 

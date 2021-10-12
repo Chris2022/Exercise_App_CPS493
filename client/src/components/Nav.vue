@@ -2,7 +2,7 @@
 <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item; is-size-3" href="index.html" :title="message">
+                <a class="navbar-item; is-size-3" href="/" :title="message">
                     <img src="../assets/FitBud.png" width="175" height="10">
                 </a>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
@@ -13,7 +13,7 @@
             </div>
             <div class="navbar-menu" :class="{'is-active': navBarIsActive}">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="about.html">
+                    <a class="navbar-item" href="/about">
                         About
                     </a>
                     <div class="navbar-item has-dropdown is-hoverable" onclick="show()">
@@ -21,30 +21,30 @@
                             Nutrition
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile" >
-                            <a class="navbar-item" href="weightLossRecipes.html" > 
+                            <a class="navbar-item" href="/weightloss" > 
                                 Recipes for Weight Loss
                             </a>
-                            <a class="navbar-item" href="proteinRecipes.html" > 
+                            <a class="navbar-item" href="/Protein" > 
                                 Recipes to Gain Muscle
                             </a>
                         </div>
                     </div>
-                    <a class="navbar-item" href="progress.html">Progress</a>
+                    <a class="navbar-item" href="/progress">Progress</a>
                     <div class="navbar-item has-dropdown is-hoverable"  onclick="displayWorkout()">
                         <a class="navbar-link is-arrowless">
                             Workouts
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile-workout">
-                            <a class="navbar-item" href="push.html">
+                            <a class="navbar-item" href="/Push">
                                 Push Workouts
                             </a>
-                            <a class="navbar-item" href="pull.html">
+                            <a class="navbar-item" href="/Pull">
                                 Pull Workouts
                             </a>
-                            <a class="navbar-item" href="leg.html">
+                            <a class="navbar-item" href="/Leg">
                                 Leg Workouts
                             </a>
-                            <a class="navbar-item" href="cardio.html">
+                            <a class="navbar-item" href="/cardio">
                                 HIIT Workouts
                             </a>
                         </div>
@@ -54,21 +54,21 @@
                             Journal
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile-journal">
-                            <a class="navbar-item" href="DailyWorkout.html">
+                            <a class="navbar-item" href="/DailyWorkout">
                                 Log Daily workout
                             </a>
-                            <a class="navbar-item" href="CalorieIntake.html">
+                            <a class="navbar-item" href="/calories">
                                 Log Calorie Intake
                             </a>
                         </div>
                     </div>
                     <div class="navbar-item">
-                        <a class="navbar-link is-arrowless" href="Friends.html">
+                        <a class="navbar-link is-arrowless" href="/Friends">
                             Friends
                         </a>
                     </div>
                     <div class="navbar-item">
-                        <a class="navbar-link is-arrowless" href="activity.html">
+                        <a class="navbar-link is-arrowless" href="/activity">
                             Activity
                         </a>
                     </div>
