@@ -1,10 +1,9 @@
 <template>
     <div class="container">
         <Nav />
-
-        <router-view/>        
+        <router-view/>  
+        <foot />
     </div>
-
 </template>
 
 <style lang="scss">
@@ -12,9 +11,11 @@
 
 <script>
 import Nav from "./components/Nav.vue";
+import foot from "./components/foot.vue";
 export default {
     components: {
-        Nav
+        Nav,
+        foot
     }
 }
 </script>
