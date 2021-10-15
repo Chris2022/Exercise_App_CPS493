@@ -1,6 +1,6 @@
 <template>
 <section class="section" id="activity">
-    <h1 class="title">Activity Feed</h1>
+    <h1 class="title">Feed</h1>
     <h2 class="subtitle">    
         Whats new ?
     </h2>

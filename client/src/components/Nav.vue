@@ -69,7 +69,7 @@
                     </div>
                     <div class="navbar-item">
                         <a class="navbar-link is-arrowless" href="/activity">
-                            Activity
+                            Feed
                         </a>
                     </div>
                 </div>
