@@ -2,9 +2,9 @@
 <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item; is-size-3" href="/">
+                <router-link class="navbar-item; is-size-3" to="/home">
                     <img src="../assets/FitBud.png" width="175" height="10">
-                </a>
+                </router-link>
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': isActive }" @click="isActive = !isActive">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
