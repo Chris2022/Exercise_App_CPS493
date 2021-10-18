@@ -1,8 +1,12 @@
 <template>
     <div class="container">
+        <div class="columns">
+            <div class="column">
+            </div>
+        </div>
         <Nav />
         <router-view/>  
-        <foot />
+        <Foot />      
     </div>
 </template>
 
@@ -10,12 +14,12 @@
 </style>
 
 <script>
-import Nav from "./components/Nav.vue";
-import foot from "./components/foot.vue";
+import Nav from "./components/Nav";
+import Foot from './components/foot.vue';
 export default {
     components: {
         Nav,
-        foot
+        Foot
     }
 }
 </script>

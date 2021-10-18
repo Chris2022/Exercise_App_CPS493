@@ -1,41 +1,38 @@
 <template>
-  <section class="hero is-link">
-    <div class="hero-body">
-      <div class="container">
+  <section>
+    <div class="hero is-body">
+      <div class="box">
         <div class="columns is-centered">
-          <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-            <form action="" class="box">
-              <div class="field">
-                <label for="" class="label">Email</label>
-                <div class="control has-icons-left">
-                  <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-envelope"></i>
-                  </span>
-                </div>
-              </div>
-              <div class="field">
-                <label for="" class="label">Password</label>
-                <div class="control has-icons-left">
-                  <input type="password" placeholder="*******" class="input" required>
-                  <span class="icon is-small is-left">
-                    <i class="fa fa-lock"></i>
-                  </span>
-                </div>
-              </div>
-              <div class="field">
-                <label for="" class="checkbox">
-                  <input type="checkbox">
-                 Remember me
-                </label>
-              </div>
-              <div class="field">
-                <button class="button is-link">
-                  Login
-                </button>
-              </div>
-            </form>
-          </div>
+              <form class="section" @submit.prevent="login()">
+                  <div class="field">
+                    <p >
+                      <label for="" class="label">Email
+                        <i class="fas fa-envelope"></i>
+                      </label>
+                      <input class="input" type="text" placeholder="Email" v-model="email">
+                        <span v-if="errors.length == 2" id="error-message">{{errors[0]}}</span>
+                        <span v-else-if="errors[0] == '*Username Required' " id="error-message">{{"*Username Required"}}</span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p>
+          
+                       <label for="" class="label">Password
+                          <i class="fas fa-lock"></i>
+                       </label>
+                        <input class="input" type="password" placeholder="Password" v-model="password">
+                          <span v-if="errors.length ==2" id="error-message">{{errors[1]}}</span>
+                          <span v-else-if="errors[0]=='*Password Required'" id="error-message">{{"*Password Required"}}</span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control">
+                      <button class="button is-link" @click="checkForm()">
+                        Login
+                      </button>
+                    </p>
+                  </div>
+                </form>
         </div>
       </div>
     </div>
@@ -43,11 +40,35 @@
 </template>
 
 <script>
+import Session from "../services/session";
 export default {
-
+    data: ()=>({
+        errors: [],
+        email: null,
+        password: null,
+        Session
+    }),
+    methods: {
+        login(){
+            this.Session.Login(this.email, this.password);
+        },
+        checkForm(){
+                if(this.email && this.password){
+                    return true
+                }
+                this.errors = []
+                if(!this.email){
+                    this.errors.push("*Username Required")
+                }
+                if(!this.password){
+                    this.errors.push("*Password Required")
+                }
+        }
+    }
 }
 </script>
-
 <style>
-
+#error-message{
+  color:red;
+}
 </style>

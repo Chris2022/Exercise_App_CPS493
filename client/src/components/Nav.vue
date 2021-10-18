@@ -2,75 +2,75 @@
 <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item; is-size-3" href="/" :title="message">
+                <a class="navbar-item; is-size-3" href="/">
                     <img src="../assets/FitBud.png" width="175" height="10">
                 </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': navBarIsActive}" @click="navBarIsActive= !navBarIsActive">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': isActive }" @click="isActive = !isActive">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div class="navbar-menu" :class="{'is-active': navBarIsActive}">
+            <div class="navbar-menu" :class="{'is-active': isActive }">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="/about">
+                    <router-link class="navbar-item is-tab" to="/about" active-class="is-active">
                         About
-                    </a>
-                    <div class="navbar-item has-dropdown is-hoverable" onclick="show()">
-                        <a class="navbar-link is-arrowless">
+                    </router-link>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-arrowless is-tab">
                             Nutrition
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile" >
-                            <a class="navbar-item" href="/weightloss" > 
+                            <router-link class="navbar-item is-tab" to="/weightloss" active-class="is-active"> 
                                 Recipes for Weight Loss
-                            </a>
-                            <a class="navbar-item" href="/Protein" > 
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/Protein" active-class="is-active"> 
                                 Recipes to Gain Muscle
-                            </a>
+                            </router-link>
                         </div>
                     </div>
-                    <a class="navbar-item" href="/progress">Progress</a>
-                    <div class="navbar-item has-dropdown is-hoverable"  onclick="displayWorkout()">
-                        <a class="navbar-link is-arrowless">
+                    <router-link class="navbar-item is-tab" to="/progress" active-class="is-active">Progress</router-link>
+                    <div class="navbar-item has-dropdown is-hoverable" >
+                        <a class="navbar-link is-arrowless is-tab">
                             Workouts
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile-workout">
-                            <a class="navbar-item" href="/Push">
+                            <router-link class="navbar-item is-tab" to="/Push" active-class="is-active">
                                 Push Workouts
-                            </a>
-                            <a class="navbar-item" href="/Pull">
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/Pull" active-class="is-active">
                                 Pull Workouts
-                            </a>
-                            <a class="navbar-item" href="/Leg">
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/Leg" active-class="is-active">
                                 Leg Workouts
-                            </a>
-                            <a class="navbar-item" href="/cardio">
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/cardio" active-class="is-active">
                                 HIIT Workouts
-                            </a>
+                            </router-link>
                         </div>
                     </div>
-                    <div class="navbar-item has-dropdown is-hoverable" onclick="showJournal()">
-                        <a class="navbar-link is-arrowless">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-arrowless is-tab">
                             Journal
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile-journal">
-                            <a class="navbar-item" href="/DailyWorkout">
+                            <router-link class="navbar-item is-tab" to="/DailyWorkout" active-class="is-active">
                                 Log Daily workout
-                            </a>
-                            <a class="navbar-item" href="/calories">
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/calories" active-class="is-active">
                                 Log Calorie Intake
-                            </a>
+                            </router-link>
                         </div>
                     </div>
-                    <div class="navbar-item">
-                        <a class="navbar-link is-arrowless" href="/Friends">
+                    <div class="navbar-item is-tab">
+                        <router-link class="navbar-link is-arrowless" to="/Friends" active-class="is-active">
                             Friends
-                        </a>
+                        </router-link>
                     </div>
-                    <div class="navbar-item">
-                        <a class="navbar-link is-arrowless" href="/activity">
+                    <div class="navbar-item is-tab">
+                        <router-link class="navbar-link is-arrowless" to="/activity" active-class="is-active">
                             Feed
-                        </a>
+                        </router-link>
                     </div>
                 </div>
 
@@ -89,11 +89,11 @@ import LoginBadge from './LoginBadge.vue';
 export default {
     data(){
         return {
-            isActive: false
+            isActive: false,
         }
     },
     components: {
-        LoginBadge
+        LoginBadge,
     }
 }
 </script>

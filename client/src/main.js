@@ -6,7 +6,10 @@ use router then mount the element with the id="app"
 import { createApp } from 'vue'
 //Third party
 import '@fortawesome/fontawesome-free';
-import 'bulma'
+import 'bulma';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'ionicons';
+import 'material-design-icons';
 //local imports
 import App from './App.vue'
 import router from './router'

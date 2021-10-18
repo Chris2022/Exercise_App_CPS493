@@ -2,40 +2,36 @@
 <section class="section">
     <h1 class="title">Friends</h1>
     <h2 class="subtitle">
-        Meet new Friends , or view existing ones.
+        View your friends or make some new ones!
     </h2>
     <div id="tabs-with-content">
         <div class="hero-foot">
-            <nav class="tabs is-boxed is-fullwidth is-medium">
-                    <div class="container">
-                      <ul>
-                        <li class="tab is-active" onclick="openTab(event,'friends')"><a >Friends</a></li>
-                        <li class="tab " onclick="openTab(event,'requests')"><a >Requests</a></li>
-                        <li class="tab" onclick="openTab(event,'discover')"><a >Discover</a></li>
-                      </ul>
-                    </div>
-                  </nav>
-              </div>
-        <div>
-        <div class="content-tab" style="display: none;" id="friends">
-            <ul class="friendsList">
-                <li>          <article class="media">
-                    <figure class="media-left">
-                      <p class="image is-128x128">
+            <div class="tabs is-centered is-toggled is-fullwidth">
+                <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]" >Friends</a>
+                <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]" >Requests</a>
+                <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]" >Discover</a>
+            </div>
+          </div>
+      </div>
+    <div class="content-tab" v-if="activetab === 1">
+      <ul class="friendsList">
+          <li>
+            <article class="media">
+               <figure class="media-left">
+                  <p class="image is-128x128">
                         <img src="https://images.unsplash.com/photo-1599058917727-824293170100?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA4fHxmaXRuZXNzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60">
-                      </p>
-                    </figure>
-                    <div class="media-content">
-                      <div class="content">
-                        <p>
+                  </p>
+              </figure>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
                           <strong>Omar Ruiz</strong>
                           <br>
-                        </p>
-                        <div class="buttons">
+                    </p>
+                      <div class="buttons">
                             <button class="button is-link">View Profile</button>
-    
-                          </div>
                       </div>
+                    </div>
                       <nav class="level is-mobile">
                         <div class="level-left">
                           <a class="level-item">
@@ -225,7 +221,6 @@
                         </p>
                         <div class="buttons">
                             <button class="button is-link">View Profile</button>
-    
                           </div>
                       </div>
                       <nav class="level is-mobile">
@@ -242,10 +237,10 @@
                         </div>
                       </nav>
                     </div>
-                  </article></li>
+                  </article><br><br><br></li>
             </ul>
         </div>
-        <div class="content-tab" style= "display: none;" id="requests">
+        <div class="content-tab" v-if="activetab === 2">
             <ul class="friendsList">
                 <li><article class="media">
                     <figure class="media-left">
@@ -313,7 +308,7 @@
                   </article></li>
             </ul>
         </div>
-        <div class="content-tab" style="display: none;" id="discover">
+        <div class="content-tab" v-if="activetab === 3">
             <ul class="friendsList">
                 <li><article class="media">
                     <figure class="media-left">
@@ -446,17 +441,38 @@
                   </li>
             </ul>
         </div>
-      </div>
-    </div>
 </section>
 </template>
 
 <script>
+import Session from "../services/session";
 export default {
-
+  el:'#tabs',
+    data: ()=>({
+        email: null,
+        password: null,
+        Session,
+        activetab:1
+    }),
+    methods: {
+        login(){
+            this.Session.Login(this.email, this.password);
+        }
+    }
 }
 </script>
 
 <style>
+.friendsList {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
 
+.friendsList li {
+  border: 1px solid #ddd; /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+}
 </style>
