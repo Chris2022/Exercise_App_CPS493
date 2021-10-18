@@ -3,12 +3,33 @@ import Session from '../services/session';
 import Home from '../views/Home.vue';
 import activity from '../views/activity.vue';
 import Friends from '../views/Friends.vue';
+import Progress from '../views/Progress.vue';
+import calories from '../views/calories.vue';
+import DailyWorkout from '../views/DailyWorkout.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Progress',
+    name: 'Progress',
+    component: Progress,
+    meta: { requiresLogin: true }
+  },
+  {
+    path: '/DailyWorkout',
+    name: 'DailyWorkout',
+    component:DailyWorkout,
+    meta: { requiresLogin: true }
+  },
+  {
+    path: '/calories',
+    name: 'calories',
+    component: calories,
+    meta: { requiresLogin: true }
   },
   {
     path:'/activity',
@@ -28,29 +49,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/calories',
-    name: 'calories',
-    component: () => import(/* webpackChunkName: "about" */ '../views/calories.vue')
-  },
-  {
     path: '/cardio',
     name: 'cardio',
     component: () => import(/* webpackChunkName: "about" */ '../views/cardio.vue')
   },
   {
-    path: '/DailyWorkout',
-    name: 'DailyWorkout',
-    component: () => import(/* webpackChunkName: "about" */ '../views/DailyWorkout.vue')
-  },
-  {
     path: '/Leg',
     name: 'Leg',
     component: () => import(/* webpackChunkName: "about" */ '../views/Leg.vue')
-  },
-  {
-    path: '/Progress',
-    name: 'Progress',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Progress.vue')
   },
   {
     path: '/Protein',
