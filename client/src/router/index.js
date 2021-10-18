@@ -22,7 +22,7 @@ const routes = [
   {
     path: '/DailyWorkout',
     name: 'DailyWorkout',
-    component:DailyWorkout,
+    component: DailyWorkout,
     meta: { requiresLogin: true }
   },
   {
