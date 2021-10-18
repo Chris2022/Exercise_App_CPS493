@@ -14,8 +14,19 @@
 </template>
 
 <script>
+import Session from "../services/session";
 export default {
-
+    data: ()=>({
+        email: null,
+        password: null,
+        Session,
+        activetab:1
+    }),
+    methods: {
+        login(){
+            this.Session.Login(this.email, this.password);
+        }
+    }
 }
 </script>
 
