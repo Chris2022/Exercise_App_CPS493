@@ -20,7 +20,6 @@ export default {
         email: null,
         password: null,
         Session,
-        activetab:1
     }),
     methods: {
         login(){

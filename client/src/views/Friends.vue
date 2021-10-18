@@ -447,7 +447,6 @@
 <script>
 import Session from "../services/session";
 export default {
-  el:'#tabs',
     data: ()=>({
         email: null,
         password: null,
