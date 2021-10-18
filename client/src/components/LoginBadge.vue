@@ -1,9 +1,9 @@
 
 <template>
     <div class="buttons" v-if="!Session.user">
-          <a class="button is-link" href='/signup'>
+          <router-link class="button is-link" to='/signup'>
             <strong>Sign up</strong>
-          </a>
+          </router-link>
           <a class="button is-light" @click="login">
             Log in
           </a>
