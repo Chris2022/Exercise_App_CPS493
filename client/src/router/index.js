@@ -6,7 +6,7 @@ import Friends from '../views/Friends.vue';
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home
   },
