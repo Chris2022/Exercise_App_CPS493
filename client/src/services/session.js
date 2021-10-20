@@ -5,7 +5,7 @@ import {NotificationProgrammatic} from "@oruga-ui/oruga-next/dist/esm/notificati
 const session = {
     user: null,
     messages: [],//{text:string, type:string}
-    toRoute: "/feed",
+    toRoute: "/activity",//activity is what I call feed
     Login(handle, password){
         try {
             const response = Login(handle,password);

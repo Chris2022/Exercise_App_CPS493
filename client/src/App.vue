@@ -13,7 +13,6 @@
 
 <style lang="scss">
 </style>
-
 <script>
 import Nav from "./components/Nav";
 import Foot from './components/foot.vue';
