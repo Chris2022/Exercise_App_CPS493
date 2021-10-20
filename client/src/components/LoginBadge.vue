@@ -9,7 +9,7 @@
           </a>
     </div>
     <div v-else>
-        Hello {{name}} 
+        Welcome Back {{name}}! 
     </div>
 </template>
 
