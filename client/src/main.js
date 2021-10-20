@@ -5,13 +5,18 @@ use router then mount the element with the id="app"
 */
 import { createApp } from 'vue'
 //Third party
-import '@fortawesome/fontawesome-free';
+import '@fortawesome/fontawesome-free/css/all.css';
 import 'bulma';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'ionicons';
-import 'material-design-icons';
+import {Notification, Config} from '@oruga-ui/oruga-next';
+import '@oruga-ui/oruga-next/dist/oruga-full.css';
 //local imports
 import App from './App.vue'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+createApp(App)
+    .use(router)
+    .use(Notification)
+    .use(Config,{
+        iconPack:'fas'
+    })
+    .mount('#app')

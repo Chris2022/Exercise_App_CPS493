@@ -5,6 +5,7 @@
             </div>
         </div>
         <Nav />
+        <messages />
         <router-view/>  
         <Foot />      
     </div>
@@ -16,9 +17,11 @@
 <script>
 import Nav from "./components/Nav";
 import Foot from './components/foot.vue';
+import Messages from "./components/Messages.vue";
 export default {
     components: {
         Nav,
+        Messages,
         Foot
     }
 }

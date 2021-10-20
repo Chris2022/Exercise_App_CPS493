@@ -5,22 +5,26 @@
         <div class="columns is-centered">
               <form class="section" @submit.prevent="login()">
                   <div class="field">
-                    <p >
-                      <label for="" class="label">Email
-                        <i class="fas fa-envelope"></i>
-                      </label>
+                    <label for="" class="label">Email</label>
+                    <p class="control has-icons-left has-icons-right" >
                       <input class="input" type="text" placeholder="Email" v-model="email">
+                        <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                        <i class="fas fa-check"></i>
+                        </span>
                         <span v-if="errors.length == 2" id="error-message">{{errors[0]}}</span>
                         <span v-else-if="errors[0] == '*Username Required' " id="error-message">{{"*Username Required"}}</span>
                     </p>
                   </div>
                   <div class="field">
-                    <p>
-          
-                       <label for="" class="label">Password
-                          <i class="fas fa-lock"></i>
-                       </label>
+                    <label for="" class="label">Password</label>
+                    <p class="control has-icons-left">
                         <input class="input" type="password" placeholder="Password" v-model="password">
+                          <span class="icon is-small is-left">
+                          <i class="fas fa-lock"></i>
+                          </span>
                           <span v-if="errors.length ==2" id="error-message">{{errors[1]}}</span>
                           <span v-else-if="errors[0]=='*Password Required'" id="error-message">{{"*Password Required"}}</span>
                     </p>
