@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch server server/index",
+    "start": "node server/index"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,8 @@
   "dependencies": {
     "bulma": "^0.9.3",
     "express": "4.17.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.14"
   },
   "devDependecies": {
     "nodemon": "^2.0.12"
