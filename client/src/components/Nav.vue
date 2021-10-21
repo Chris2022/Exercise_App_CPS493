@@ -13,9 +13,6 @@
             </div>
             <div class="navbar-menu" :class="{'is-active': isActive }">
                 <div class="navbar-start">
-                    <router-link class="navbar-item is-tab" to="/about" active-class="is-active">
-                        About
-                    </router-link>
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link is-arrowless is-tab">
                             Nutrition
@@ -71,6 +68,22 @@
                         <router-link class="navbar-link is-arrowless" to="/activity" active-class="is-active">
                             Feed
                         </router-link>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-arrowless is-tab">
+                            More
+                        </a>
+                        <div class="navbar-dropdown" id="hidden-mobile-journal">
+                             <router-link class="navbar-item is-tab" to="/about" active-class="is-active">
+                                About
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/contact" active-class="is-active">
+                                Contact
+                            </router-link>
+                            <router-link class="navbar-item is-tab" to="/FAQ" active-class="is-active">
+                                FAQ
+                            </router-link>
+                        </div>
                     </div>
                 </div>
 
