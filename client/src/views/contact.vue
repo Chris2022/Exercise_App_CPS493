@@ -4,7 +4,8 @@
         <h2 class="subtitle">
             If you're having any issues or comments please feel do not hesitate to
             let us know, just leave your name, email, and message and we will contact you as
-            soon as possible. Please also view the FAQ's to learn all the features or common 
+            soon as possible. Please also view the 
+            <router-link to='/FAQ'>FAQ's</router-link> to learn all the features or common 
             questions about Fit-Bud.
         </h2>
         <div class="field">
@@ -22,7 +23,7 @@
             </div>
             <label class="label">Message</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
+                <textarea class="textarea" placeholder="Type your message here"></textarea>
             </div>
             <div class="field is-grouped" id="buttons">
                 <div class="control">
