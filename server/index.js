@@ -7,10 +7,6 @@ const postscontroller = require('./controllers/posts');
 const app = express() //need to call the express constructor right away
 const port = process.env.PORT||3000 //the port that will be receiving our message.
 
-
-console.log(`The best class at New Paltz is ${process.env.BEST_WEBSITE}`);
-
-
 // app is an object which will have many things attached.
 // when someone sends a get message with this particular path,
 // then I will send back hello world
