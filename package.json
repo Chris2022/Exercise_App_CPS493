@@ -19,10 +19,10 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.9.3",
+    "dotenv": "^10.0.0",
     "express": "4.17.1",
     "lodash": "^4.17.21",
-    "nodemon": "^2.0.14",
-    "dotenv": "^10.0.0"
+    "nodemon": "^2.0.14"
   },
   "devDependecies": {
     "nodemon": "^2.0.12"

@@ -19,5 +19,5 @@ app
 app 
   .get('*',(req,res) =>res.sendFile(path.join(__dirname,'../docs/index.html')))//you can include an actual file. Can send a file
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`)
 })
