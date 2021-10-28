@@ -14,9 +14,17 @@
                                 <label class="label">Last Name</label>
                                     <input class="input" type="text" placeholder="Last Name">
                             </div>
-                            <div class="field" style="text-align: center">
-                                <label class="label">Email</label>
-                                    <input class="input" type="text" placeholder="Email">
+                            <div class="field" style="text-align: center" >
+                                <label class="label ">Email</label>
+                                    <p class="control has-icons-left has-icons-right">
+                                         <input class="input" type="text" placeholder="Email">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <span class="icon is-small is-right">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </p>
                             </div>
                             <div class="field" style="text-align: center" id="check">
                                 <label class="label">Select Gender:</label>
@@ -86,7 +94,7 @@
                             <div class="field" style="text-align: center;">
                             <input type="checkbox" name="updates">
                             Yes, I would like to receive by email the latest news, innovation updates, and offers from Fit-Bud.
-                            <p style="text-align: center;">By creating an account with Fit-Bud you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                            <p style="text-align: center;">By creating an account with Fit-Bud you agree to our <router-link to="/signup" style="color:dodgerblue">Terms & Privacy</router-link>.</p>
                             </div>    
                             <div class="signup-button " id="Sign-up-button">
                                 <button class="button is-link" @click="sign">Sign Up</button>
