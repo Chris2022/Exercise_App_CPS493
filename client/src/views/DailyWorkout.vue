@@ -2,7 +2,9 @@
     <section class="section">
         <h1 class="title">Daily Workout</h1>
         <h2 class="subtitle">
-            Log your daily workouts here.
+            keep Track of those gains and log your daily workout here.
+            Just input the required data and hit submit and bam you are
+            another step closer to reaaching your goal!
         </h2>
         <div id="tabs-with-content">
         <div class="hero-foot">
