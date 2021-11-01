@@ -4,7 +4,7 @@
         <h2 class="subtitle">
             keep Track of those gains and log your daily workout here.
             Just input the required data and hit submit and bam you are
-            another step closer to reaaching your goal!
+            another step closer to reaching  your goal!
         </h2>
         <div id="tabs-with-content">
         <div class="hero-foot">
