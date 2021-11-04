@@ -3,7 +3,8 @@
         <h1 class="title">Calorie Intake</h1>
         <h2 class="subtitle">
             Keeping track of your calorie intake is important, so keep a track of the foods you eat
-            and their calories throughout the day.
+            and their calories throughout the day. Fill the form the form out and hit submit and
+            you're all set!
         </h2>
         <div class="box">
             <table class="table">
