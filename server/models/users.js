@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const list = [
     { 
         firstName: 'Chris',
@@ -20,13 +21,19 @@ module.exports.Get= user_id => list[user_id];
 //what 
 module.exports.GetByHandle = function GetByHandle(handle) { return ({ ...list.find( x => x.handle == handle ), password: undefined }); } 
 //does some checking
-module.exports.Add= function Add(user) {
+module.exports.Add= function Add(user,cb) {
     if(!user.firstName){
-        throw { code: 422, msg: "First Name is required" }
+        return Promise.reject({ code: 422, msg: "First Name is required" });
     }
-     list.push(user);
-     //returns user but not the password
-     return { ...user, password: undefined };
+    return bcrypt.hash(user.password,+process.env.SALT_ROUNDS)
+    .then(hash =>{
+        user.password = hash;
+        list.push(user);
+        //pass in null which means no error and pass the value we want passed out
+        //so this is the equivalent to returning in the add.
+        return { ...user, password: undefined };//this user object is returned to promise
+        //promise will return it to the next then
+    });
 }
 
 
@@ -57,14 +64,20 @@ module.exports.Delete= function Delete(user_id) {
 module.exports.Login = function Login(handle, password){
     console.log({ handle, password})//debugging here
     const user = list.find(x=> x.handle == handle);// find user, if you find one then get password, if not
-    //then throw an error
-    if(!user) throw { code: 401, msg: "Sorry there is no user with that handle" };
-    //check the passowrd of the user and the password entered
-    if( ! (password == user.password) ){
-        throw { code: 401, msg: "Wrong Password" };
-    }
-    //send user data back to user but not the password.
-    const data = { ...user, password: undefined };
-
-    return { user: data };
+    //pass the error in asynchronous form
+    //when we reject it is the equivalent of an error
+    //we always have to return a promise
+    if(!user) return Promise.reject({ code: 401, msg: "Sorry there is no user with that handle" });
+    
+    return bcrypt.compare(password,user.password)
+        .then(result =>{
+            //check the passowrd of the user and the password entered
+            if( !result ){
+                throw({ code: 401, msg: "Wrong Password" });
+            }
+            //if result is true, pull the password
+            const data = { ...user, password: undefined };
+            //return 
+            return { user: data };
+    });
 }
