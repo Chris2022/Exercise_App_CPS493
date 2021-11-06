@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <h1 class="title">Contact Us</h1>
+        <h1 class="title animate__animated animate__bounceInLeft">Contact Us!</h1>
         <h2 class="subtitle">
             If you're having any issues or comments please feel do not hesitate to
             let us know, just leave your name, email, and message and we will contact you as

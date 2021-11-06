@@ -1,6 +1,6 @@
 <template>
 <section class="section">
-    <h1 class="title" id="header">High Protein Recipes</h1>
+    <h1 class="title animate__animated animate__zoomIn" id="header">High Protein Recipes</h1>
     <h2 class="subtitle" id="header">
         If you're looking at making some serious gains and seek to increase muscle mass, check some of these
         high protein recipes!

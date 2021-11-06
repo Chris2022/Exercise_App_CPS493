@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <section class="section">
-      <h1 class="title">Frequently Asked Questions</h1>
+      <h1 class="title animate__animated animate__heartBeat">Frequently Asked Questions</h1>
       <h2 class="subtitle is-4">FAQ's is the fastest way to find an answer to your question!</h2>
       <div class="columns" v-if="faqs && faqs.length">
         <div class="column is-one-third" v-for="faq in faqs" :key="faq">

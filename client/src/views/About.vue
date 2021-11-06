@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title">
+    <h1 class="title animate__animated animate__bounceInLeft">
       <span class="icon-text has-text-link">
       <i class="fas fa-info-circle"></i></span>
         About Fit Bud</h1>

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title" id="header">Recipes for Weight Loss</h1>
+    <h1 class="title animate__animated animate__zoomIn" id="header">Recipes for Weight Loss</h1>
     <h2 class="subtitle" id="header">
         If you're looking to lose weight while eating delicious food, check some of these
         recipes out!
