@@ -5,6 +5,7 @@
             keep Track of those gains and log your daily workout here.
             Just input the required data and hit submit and bam you are
             another step closer to reaching  your goal!
+            You can either log in a cardio workout or a weight workout!
         </h2>
         <div id="tabs-with-content">
         <div class="hero-foot">
