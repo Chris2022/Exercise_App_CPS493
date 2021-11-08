@@ -4,7 +4,7 @@
           <router-link class="button is-link" to='/signup'>
             <strong>Sign up</strong>
           </router-link>
-          <a class="button is-light" @click="login">
+          <a class="button is-light" @click.prevent="login()">
             Log in
           </a>
     </div>

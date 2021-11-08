@@ -13,6 +13,10 @@ app
     res.send(model.Get(req.params.user_id));
 })
 .post("/Login", (req, res, next) =>{
+    /*obtains the user login information
+    and check to see if it is correct, it is,
+    then send the user data
+    */
     model.Login(req.body.handle, req.body.password)
         .then(user=>{
         //no error ends pipeline and sends user

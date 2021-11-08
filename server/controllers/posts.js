@@ -13,7 +13,6 @@ app
 id is the parameter so we do params.id
 */
 .get("/:id", (req, res, next) =>{
-    console.log(req.headers)
     res.send(model.Get(req.params.id));
 })
 .post("/", (req, res, next) =>{
