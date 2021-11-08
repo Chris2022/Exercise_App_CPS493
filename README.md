@@ -1,4 +1,4 @@
-# Exercise_App_CPS493
+# Fit- Bud
 ***This is the exercise app that I will be working on for the Fall 2021 Semester in CPS 493: Web Programming***
 
 Welcome to Fit-Bud! A Fitness-Tracker App that allows users to
