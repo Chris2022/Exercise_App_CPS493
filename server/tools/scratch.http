@@ -5,3 +5,7 @@ http://localhost:3100/posts
 
 ###
 http://localhost:3100/register
+
+###
+http://localhost:3100/seed
+

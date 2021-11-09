@@ -15,7 +15,6 @@
                 <input type="number" class="input is-normal" v-model="totalExercise">
                 <button class="button is-link is-hovered" @click.prevent="update(totalCal,totalExercise)">Daily Goal!</button>
                 <button class="button is-light is-hovered" @click.prevent="clear()">Clear</button>
-
             </form>
         </div>
         <div class="box">
@@ -95,9 +94,7 @@ mounted: function () {
   this.date = this.getDate();
   this.time = this.getTime();},
 };
-
 </script>
-
 <style>
 .button {
     margin-top: 10px;
