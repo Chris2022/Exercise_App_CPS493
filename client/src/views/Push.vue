@@ -1,17 +1,35 @@
 <template>
     <section class="section">
-        <h1 class="title">Push Workouts</h1>
+        <h1 class="title animate__animated animate__backInDown">Push Workouts</h1>
         <h2 class="subtitle">
             Push Workouts consist of working out the chest, shoulders and triceps.
             Here are some workouts to help you get started on your road to the top.
         </h2>
-        <div id="tabs-with-content">
+        <div class="container">
             <div class="hero-foot">
-                <div class="tabs is-centered is-toggled is-fullwidth">
-                    <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]" >Chest</a>
-                    <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]" >Shoulders</a>
-                    <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]" >Triceps</a>
-                    <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]" >More</a>
+                <div class="tabs is-toggle is-fullwidth">
+                    <ul>
+                        <li id="tabular">
+                            <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">
+                                <span>Chest</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">
+                                <span>Shoulders</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]">
+                                <span>Triceps</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]">
+                                <span>More</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
           </div>
         </div>
@@ -136,5 +154,8 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+#tabular :hover {
+    background-color:hsl(217, 71%, 53%);
 }
 </style>

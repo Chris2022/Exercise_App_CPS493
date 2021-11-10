@@ -1,16 +1,26 @@
 <template>
     <section class="section">
-        <h1 class="title">HIIT Workouts</h1>
+        <h1 class="title animate__animated animate__backInDown">HIIT Workouts</h1>
         <h2 class="subtitle">
             HIIT: <strong>H</strong>igh <strong>I</strong>ntensity <strong>I</strong>nterval <strong>T</strong>raining
             are workouts made to shed of those stubborn calories. Here are some that are sure to have
             you sweating in no time. 
         </h2>
-        <div id="tabs-with-content">
+        <div class="container">
             <div class="hero-foot">
-                <div class="tabs is-centered is-toggled is-fullwidth">
-                    <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]" >HIIT Workouts</a>
-                    <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]" >More</a>
+                <div class="tabs is-toggle is-fullwidth">
+                    <ul>
+                        <li id="tabular">
+                            <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">
+                                <span>HIIT Workouts</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">
+                                <span>More</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
           </div>
         </div>
@@ -102,5 +112,8 @@ export default {
 }
 #indent{
   margin-left: 100px;
+}
+#tabular :hover {
+    background-color:hsl(217, 71%, 53%);
 }
 </style>

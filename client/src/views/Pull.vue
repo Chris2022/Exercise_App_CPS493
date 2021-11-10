@@ -1,16 +1,34 @@
 <template>
    <section class="section">
-        <h1 class="title">Pull Workouts</h1>
+        <h1 class="title animate__animated animate__backInDown">Pull Workouts</h1>
         <h2 class="subtitle">
             Pull Workouts consist of workouts for back, biceps and forearms. Check some of these workouts out in case you need help geetting started.
         </h2>
-        <div id="tabs-with-content">
+        <div class="container">
             <div class="hero-foot">
-                <div class="tabs is-centered is-toggled is-fullwidth">
-                    <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]" >Back</a>
-                    <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]" >Biceps</a>
-                    <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]" >Forearms</a>
-                    <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]" >More</a>
+                <div class="tabs is-toggle is-fullwidth">
+                    <ul>
+                        <li id="tabular">
+                            <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">
+                                <span>Back</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">
+                                <span>Biceps</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]">
+                                <span>Forearms</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]">
+                                <span>More</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
           </div>
         </div>
@@ -186,5 +204,8 @@ export default {
 <style>
 .workouts{
   text-align: center;
+}
+#tabular :hover {
+    background-color:hsl(217, 71%, 53%);
 }
 </style>

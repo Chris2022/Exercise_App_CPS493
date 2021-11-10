@@ -1,19 +1,37 @@
 <template>
      <section class="section">
-        <h1 class="title">Leg Workouts</h1>
+        <h1 class="title animate__animated animate__backInDown">Leg Workouts</h1>
         <h2 class="subtitle">
             Not sure what to do for leg day?
             Well don't stress, here are some simple routines you can do
             to get start your road on getting them tree trunks!
             Check out some of the workouts you can do for either quads, calves, or hamstrings!
         </h2>
-        <div id="tabs-with-content">
+        <div class="container">
             <div class="hero-foot">
-                <div class="tabs is-centered is-toggled is-fullwidth">
-                    <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]" >Quads</a>
-                    <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]" >Calves</a>
-                    <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]" >Hamstrings</a>
-                    <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]" >More</a>
+                <div class="tabs is-toggle is-fullwidth">
+                    <ul>
+                        <li id="tabular">
+                            <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">
+                                <span>Quads</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">
+                                <span>Calves</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]">
+                                <span>Hamstrings</span>
+                            </a>
+                        </li>
+                        <li id="tabular">
+                            <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]">
+                                <span>More</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
           </div>
         </div>
@@ -168,5 +186,8 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+}
+#tabular :hover {
+    background-color:hsl(217, 71%, 53%);
 }
 </style>
