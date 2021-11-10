@@ -72,7 +72,7 @@
         </div>
     </div>
     <div class="container" v-if="activetab === 2">
-              <div class="box">
+        <div class="box">
             <figure id="centered" >
                 <img src="../assets/Seated-Calf-Raise.jpeg" >
             </figure>
@@ -81,14 +81,70 @@
                Keeping your core engaged, lift your heels off the ground as high as possible.
                 Slowly lower your heels back down to the ground, and repeat. </p>
         </div>
+        <div class="box">
+            <figure id="centered" >
+                <img src="../assets/man-training-on-agility-ladder-drill.jpeg" >
+            </figure>
+            <h2 class="subtitle">Agility Ladder: </h2>
+            <p>The agility ladder exercise is not exclusively reserved for footballers, you know. Don’t have an agility ladder? That’s not a problem. You can always improvise with chalk or tape. Here’s how to do it:
+                    Place the ladder on the floor. If you are using tape or drawing, make sure there’s ample space between the rungs.
+                    Stand at one end of the agility ladder
+                    Hop between the spaces of the rungs until you get to the end of the ladder
+                    Walk back to the start of the ladder
+                    Repeat </p>
+        </div>
+        <div class="box">
+            <figure id="centered" >
+                <img src="../assets/athletic-legs.jpeg" >
+            </figure>
+            <h2 class="subtitle">Stair Run: </h2>
+            <p>You can train your calves by running up the stairs in a stadium or at home. The action of constantly flexing and extending your foot gives your calves a good workout. This is not running for cardio endurance, though. So, here’s how to do it properly.
+                    Start at the bottom of the stairs
+                    Run up the flight of stairs on the balls of your feet, making sure that you don’t skip any of the steps
+                    Walk down the to the starting position when you reach the top, or where you intend to stop (depending on the number of rows on the stairs)
+                    Repeat</p>
+        </div>
+        <div class="box">
+            <figure id="centered" >
+                <img src="../assets/calf-raise-with-dumbbels.jpeg" >
+            </figure>
+            <h2 class="subtitle">Farmer's Walk: </h2>
+            <p>The farmer’s walk will strengthen your overall muscle and improve your balance while also working your calves.
+                        Here’s how to do it:
+                        Grab a pair of dumbbells in both hands, letting them hang at your sides
+                        Raise yourself until you are on your toes
+                        Walk forward quickly, making sure your steps and short and light
+                        Start with lighter weight and increase it as you gain more balance</p>
+        </div>
     </div>
     <div class="container" v-if="activetab === 3">
-              <div class="box">
+        <div class="box">
             <figure id="centered" >
                 <img src="../assets/_main2_hipthrust.jpeg" >
             </figure>
             <h2 class="subtitle">Bench Hip Thrust: </h2>
             <p>Prop your upper back and shoulders on a bench, and hug your arms across your chest, Ibrahim says. Place your feet flat on the floor, sitting your hips low. Drive both feet into the ground as you press both hips up toward the ceiling. At the top of the movement, squeeze your glutes and hold for two seconds. Lower, and repeat. Use just your bodyweight, or add weight for a greater challenge.</p>
+        </div>
+        <div class="box">
+            <figure id="centered" >
+                <img src="../assets/single_leg_hip_thrust_main_0.jpeg" >
+            </figure>
+            <h2 class="subtitle">Single-leg Bench Hip Thrust: </h2>
+            <p>Prop your upper back and shoulders on a bench, and hug your arms across your chest. Place your feet flat on the floor, sitting your hips low. Lift one leg, bending your knee and flexing your toes toward your head. Drive your anchor foot into the ground as you press both hips up toward the ceiling. At the top of the movement, squeeze your glutes and hold for two seconds. Lower, and repeat all reps on one side, then switch. Use just your bodyweight, or add weight for a greater challenge.</p>
+        </div>
+        <div class="box">
+            <figure id="centered" >
+                <img src="../assets/1280-hamstring-curl-exercise-ball.jpeg" >
+            </figure>
+            <h2 class="subtitle">Swiss Ball Hamstring Curl: </h2>
+            <p>Position a Swiss ball in front of your feet. Lie down with your back and palms flat on the floor. Place your heels on top of the ball, then press your hips and glutes off the floor. Keep your back straight and abs engaged. Dig your heels into the ball as you curl it toward your glutes. Reverse the motion, and press the Swiss ball away from your glutes to the start position.</p>
+        </div>
+        <div class="box">
+            <figure id="centered" >
+                <img src="../assets/cable-pull-through.jpeg" >
+            </figure>
+            <h2 class="subtitle">Cable or Band Pull-through: </h2>
+            <p>Set up a resistance band or cable pulley at ankle height. Straddle the cable/band between your legs, and face away from the column. Grab the end and walk away from the anchor point until you feel some resistance. While keeping your arms straight and core engaged, bend over at the hips and allow the pulley system to drive the rope and your hips back toward the column. Pause at the bottom, and squeeze your glutes together for a strong lockout, Ibrahim says. Hinge, then drive yourself back to the top position.</p>
         </div>
     </div>
     </section>
