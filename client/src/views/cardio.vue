@@ -73,14 +73,16 @@
             </div>
         </div>
 
-        <div class="container" v-if="activetab === 2" id="workouts">
-            <div>
-                <h2 class="subtitle"> <strong>HIIT Workout</strong></h2>
-                    <iframe src="https://www.youtube.com/embed/jpizoUy4K9s" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div>
-                <h2 class="subtitle"> <strong>Another HIIT Workout</strong></h2>
-                    <iframe src="https://www.youtube.com/embed/edIK5SZYMZo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        <div class="container" v-if="activetab === 2">
+            <div class="box" id="workouts">
+                <div>
+                    <h2 class="subtitle"> <strong>HIIT Workout</strong></h2>
+                        <iframe src="https://www.youtube.com/embed/jpizoUy4K9s" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h2 class="subtitle"> <strong>Another HIIT Workout</strong></h2>
+                        <iframe src="https://www.youtube.com/embed/edIK5SZYMZo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>
@@ -95,7 +97,7 @@ export default {
 </script>
 
 <style>
-.workouts{
+#workouts{
   text-align: center;
 }
 #indent{
