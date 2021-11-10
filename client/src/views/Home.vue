@@ -40,36 +40,4 @@ export default {
 }
 </script>
 <style lang="scss">
-// .slider-frame{
-//     overflow: hidden;
-//     height: 800px;
-//     width: 1200px;
-//     margin-left: 360;
-//     margin-top: 20px;
-
-// }
-// @keyframes slide-animation{
-//     0%{left: 0px;}
-//     10%{left: 0px;}
-//     20%{left: 800px;}
-//     30%{left: 800px;}
-//     40%{left: 1200px;}
-//     50%{left: 1200px;}
-//     60%{left: 800px;}
-//     70%{left: 800px;}
-//     80%{left: 0px;}
-//     90%{left: 0px;}
-//     100%{left: 0px;}
-// }
-// .slider-images{
-//     width: 1200px;
-//     height: 800px;
-//     margin: 0 0 0 -2400px;
-//     position: relative;
-//     -animation-name: slide_animation;
-//     -animation-duration: 33s;
-//     -animation-iteration-count: infinite;
-//     -animation-play-state: running;
-//     -direction: alternate;
-// }
 </style>
