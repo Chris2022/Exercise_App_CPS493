@@ -12,7 +12,7 @@ const session = {
             this.user = response.user;
             router.push(this.toRoute);
         } catch (error) {
-            this.Error(error)
+            this.Error(error);
         }
     },
     Error(error){
@@ -26,7 +26,7 @@ const session = {
             type: 'danger',
             closable: true,
 
-        })
+        });
 
     }
 };

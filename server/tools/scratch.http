@@ -68,10 +68,10 @@ POST http://localhost:3100/posts
 Content-Type: application/json
 
 {
-    "src": "https://apod.nasa.gov/apod/image/2111/MilkyWayWaterfall_XieJie_960.jpg",
-    "alt": "A Waterfall and the Milky Way",
-    "caption": "A Waterfall and the Milky Way",
-    "user_handle": "@JewPaltz",
+    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToG5k0OomcQ09XFhyF1J1bFjJ3sCKhqNFXyw&usqp=CAU",
+    "alt": "Coding",
+    "caption": "Programming... Yessir",
+    "user_handle": "@ctejada710",
     "isPublic": true
 }
 ###
@@ -87,3 +87,20 @@ DELETE  http://localhost:3100/posts/618cac0f347b76cc068f980e
 
 ###
 POST http://localhost:3100/posts/seed
+###
+POST http://localhost:3100/users/register
+Content-Type: application/json
+
+    { 
+        "firstName": "Cristiano",
+        "lastName": "Ronaldo",
+        "handle": "@cristiano",
+        "pic": "https://www.google.com/search?q=cristiano+ronaldo&sxsrf=AOaemvK_pbeQYIKvLa7w_1xcNzTZfjGNGg:1637017730492&tbm=isch&source=iu&ictx=1&fir=HdSjEx3WnIE-kM%252CNOJxK7Qb9qsGeM%252C_%253BuCfpzgiRDwpXcM%252CMl-ns176BYbPkM%252C_%253BOnH1nkPOr9oi-M%252CbW16a7StSOXqTM%252C_%253BPVqtO_bGlTfykM%252CALzjqykvxEYPfM%252C_&vet=1&usg=AI4_-kTF9ciW8eytOBhP8IGs1cj7FxheQQ&sa=X&ved=2ahUKEwiei8Sivpv0AhWOQTABHfPGD3kQ_h16BAgdEAE#imgrc=HdSjEx3WnIE-kM",
+        "password": "ronaldo",
+        "isAdmin": true,
+        "emails": [
+            "potus@wh.gov"
+        ],
+        "following": [ { "handle": "@ctejada710", "isApproved": true } ]
+    }
+
