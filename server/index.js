@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 
-console.log(`The best class at New Paltz is ${process.env.BEST_CLASS}`);
-
 const usersController = require('./controllers/users');
 const postsController = require('./controllers/posts');
 
@@ -43,5 +41,5 @@ app
     })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`)
 })
