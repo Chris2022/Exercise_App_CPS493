@@ -1,4 +1,4 @@
-import { api } from "./myfetch";
+import { api } from "./myFetch";
 
 export function GetAll() {
     return api('posts');
