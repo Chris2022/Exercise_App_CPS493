@@ -55,7 +55,7 @@ http://localhost:3100/posts
 http://localhost:3100/posts/618cac0f347b76cc068f980e
 
 ###
-http://localhost:3100/posts/wall/@JewPaltz
+http://localhost:3100/posts/wall/@ctejada710
 
 ###
 http://localhost:3100/posts/feed/@JewPaltz
@@ -103,4 +103,7 @@ Content-Type: application/json
         ],
         "following": [ { "handle": "@ctejada710", "isApproved": true } ]
     }
+
+###
+http://localhost:3100/posts/activity/@ctejada710
 
