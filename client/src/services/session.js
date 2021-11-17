@@ -1,16 +1,20 @@
 import router from "../router";
 import { Login } from "./users";
-import {NotificationProgrammatic} from "@oruga-ui/oruga-next/dist/esm/notification";
+import { NotificationProgrammatic } from "@oruga-ui/oruga-next/dist/esm/notification";
 
 const session = {
     user: null,
-    messages: [],//{text:string, type:string}
-    toRoute: "/activity",//activity is what I call feed
+    messages: [],       // {text: string, type: string }
+    toRoute: '/activity',
     Login(handle, password){
+
         try {
-            const response = Login(handle,password);
+            const response = Login(handle, password);
+
             this.user = response.user;
+    
             router.push(this.toRoute);
+                
         } catch (error) {
             this.Error(error);
         }
@@ -26,7 +30,7 @@ const session = {
             type: 'danger',
             closable: true,
 
-        });
+        })
 
     }
 };

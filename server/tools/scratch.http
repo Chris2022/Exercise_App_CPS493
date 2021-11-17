@@ -107,3 +107,6 @@ Content-Type: application/json
 ###
 http://localhost:3100/posts/activity/@ctejada710
 
+###
+http://localhost:3100/posts/feed/@ctejada710
+
