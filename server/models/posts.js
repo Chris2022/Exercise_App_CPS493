@@ -63,9 +63,9 @@ module.exports.GetFeed_ = function GetFeed_(handle) {
         }},
         {$unwind: '$posts'},
         {$replaceRoot: { newRoot: "$posts" } },
+    // @ts-ignore
     ].concat(addOwnerPipeline));
     return query.toArray();
-
 }
 
 module.exports.GetFeed = async function (handle) {
@@ -77,6 +77,7 @@ module.exports.GetFeed = async function (handle) {
     const targets = user.following.filter(x=> x.isApproved).map(x=> x.handle).concat(handle)
     const query = collection.aggregate([
         {$match: { user_handle: {$in: targets} } },
+     // @ts-ignore
      ].concat(addOwnerPipeline));
     return query.toArray();
 }

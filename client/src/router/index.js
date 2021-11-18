@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path:'/feed',
-    name: 'activity',
+    name: 'feed',
     component: activity,
     meta: { requiresLogin: true }
   },
