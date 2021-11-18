@@ -32,7 +32,7 @@ const routes = [
     meta: { requiresLogin: true }
   },
   {
-    path:'/activity',
+    path:'/feed',
     name: 'activity',
     component: activity,
     meta: { requiresLogin: true }

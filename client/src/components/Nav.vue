@@ -65,7 +65,7 @@
                         </router-link>
                     </div>
                     <div class="navbar-item is-tab">
-                        <router-link class="navbar-link is-arrowless" to="/activity" active-class="is-active">
+                        <router-link class="navbar-link is-arrowless" to="/feed" active-class="is-active">
                             Feed
                         </router-link>
                     </div>
