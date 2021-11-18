@@ -19,6 +19,19 @@ const list = [
         following: [ { handle: '@vp', isApproved: true }, { handle: '@johnsmith', isApproved: true }, ],
         get name(){ return this.firstName + ' ' + this.lastName },
     },
+    { 
+        firstName: 'Moshe',
+        lastName: 'Plotkin',
+        handle: '@JewPaltz',
+        pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMo3I5GL9_Zd_LULXRIXTzRLlVESBnoGp8sw&usqp=CAU',
+        password: 'me',
+        isAdmin: true,
+        emails: [
+            "plotkinm@newpaltz.edu"
+        ],
+        following: [ { handle: '@vp', isApproved: true }, { handle: '@johnsmith', isApproved: true }, ],
+        get name(){ return this.firstName + ' ' + this.lastName },
+    }
 ];
 module.exports.GetAll = function GetAll() { return collection.find().toArray() ; }
 module.exports.Get = user_id => collection.findOne({_id: new ObjectId(user_id)}) 

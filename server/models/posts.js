@@ -33,7 +33,7 @@ const list = [
 ];
 const addOwnerPipeline = [
     {"$lookup" : {
-        from: "users",
+        from: "Users",
         localField: 'user_handle',
         foreignField: 'handle',
         as: 'user',
@@ -71,6 +71,7 @@ module.exports.GetFeed_ = function GetFeed_(handle) {
 module.exports.GetFeed = async function (handle) {
     //  The "MongoDB" way to do things. (Should test with a large `following` array)
     const user = await Users.collection.findOne({ handle });
+    console.log({ user });
     if(!user){
         throw { code: 404, msg: 'No such user'};
     }
