@@ -5,7 +5,7 @@
                 <div class="field">
                     <label class="label">Picture</label>
                     <div class="control">
-                        <input class="input" type="url" placeholder="https://example.com" v-model="post.src" />
+                        <input class="input" type="url" placeholder="https://example.com " v-model="post.src" />
                     </div>
                 </div>
                 <div class="field">
@@ -53,6 +53,11 @@ export default {
     data(){
         return {
             post: this.newPost
+        }
+    },
+    watch: {
+        newPost(){
+            this.post = this.newPost;
         }
     }
 }

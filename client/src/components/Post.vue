@@ -37,9 +37,7 @@
 <script>
 export default {
     props: {
-        data :{
-          post: Object
-        } 
+        post: Object
     },
     computed: {
         prettyDate(){

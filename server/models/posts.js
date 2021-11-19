@@ -69,9 +69,9 @@ module.exports.GetFeed_ = function GetFeed_(handle) {
 }
 
 module.exports.GetFeed = async function (handle) {
+    console.log(handle);
     //  The "MongoDB" way to do things. (Should test with a large `following` array)
-    const user = await Users.collection.findOne({ handle });
-    console.log({ user });
+    const user = await Users.collection.findOne({handle});
     if(!user){
         throw { code: 404, msg: 'No such user'};
     }

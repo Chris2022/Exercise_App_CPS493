@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Session from '../services/session';
 import Home from '../views/Home.vue';
-import activity from '../views/activity.vue';
+import feed from '../views/activity.vue';
 import Friends from '../views/Friends.vue';
 import Progress from '../views/Progress.vue';
 import calories from '../views/calories.vue';
@@ -34,7 +34,7 @@ const routes = [
   {
     path:'/feed',
     name: 'feed',
-    component: activity,
+    component: feed,
     meta: { requiresLogin: true }
   },
   {

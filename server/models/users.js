@@ -10,7 +10,7 @@ const list = [
         firstName: 'Chris',
         lastName: 'Tejada',
         handle: '@ctejada710',
-        pic: 'https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        pic: 'https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg',
         password: 'tejada',
         isAdmin: true,
         emails: [
