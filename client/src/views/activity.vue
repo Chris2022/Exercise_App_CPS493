@@ -35,9 +35,6 @@ export default {
     }),
     async mounted(){
         this.posts = await GetFeed(session.user.handle)
-        for(let i =0; this.posts.length; i++){
-            console.log(this.posts[i]);
-        }
     },
     methods: {
         async remove(post, i){
