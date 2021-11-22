@@ -102,7 +102,7 @@ export default {
   async mounted() {
     this.reviews = await GetAll();
     this.newRev.title = this.TITLE;
-    this.newRev.review = this.REVIE;
+    this.newRev.review = this.REVIEW;
   },
   methods: {
     async add() {
