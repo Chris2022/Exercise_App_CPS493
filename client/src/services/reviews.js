@@ -3,3 +3,6 @@ import { api } from "./myFetch";
 export function GetAll() {
     return api('reviews');
 }
+export function Add(rev) {
+    return api('reviews', rev);
+}
