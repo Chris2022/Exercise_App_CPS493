@@ -3,12 +3,12 @@
     <section class="section">
       <h1 class="title animate__animated animate__heartBeat">Frequently Asked Questions</h1>
       <h2 class="subtitle is-4">FAQ's is the fastest way to find an answer to your question!</h2>
-      <div class="columns" v-if="faqs && faqs.length">
+      <div class="columns">
         <div class="column is-one-third" v-for="faq in faqs" :key="faq">
           <div class="card">
             <div class="card-content">
               <p class="title">{{faq.title}}</p>
-              <p class="answer">{{faq.body}}</p>
+              <p class="answer">{{faq.review}}</p>
             </div>
           </div>
         </div>
@@ -18,24 +18,16 @@
 </template>
 
 <script>
-import axios from 'axios';
+import {  GetAll } from "../services/reviews"
 export default {
-  name: 'faq',
-  data: ()=>({
-    faqs: [],
-    errors: [],
-  }),
-  //since the processing of the options is finished you have access to 
-  //reactive data properties and change them if you want. 
-  //At this stage DOM has not been mounted or added yet. So you cannot do any DOM manipulation here
-  created(){
-    axios.get('https://jsonplaceholder.typicode.com/posts').then(response =>{
-      this.faqs =response.data.slice(0,10);
-    })
-    .catch(e => {
-      this.errors.push(e)
-    })
-  }
+    data() {
+        return {
+            faqs: []
+        }
+    },
+    async mounted(){
+        this.faqs = await GetAll();
+    }
 }
 </script>
 <style>
