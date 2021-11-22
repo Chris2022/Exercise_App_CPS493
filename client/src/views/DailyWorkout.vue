@@ -16,74 +16,33 @@
           </div>
       </div>
         <div class="box" v-if="activetab === 1">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <th>Enter a workout:</th>
-                        <td><input class="input" type="text" placeholder="Enter Workout: " v-model="workout"></td>
-                        <th>Calories Burned: </th>
-                        <td><input class="input" type="number" placeholder="Enter Calorie Amount:" v-model="calories"></td>
-                         <th>Total Time: </th>
-                        <td><input class="input" type="number" placeholder="Enter Time Lapsed:" v-model="time"></td>
-                        <td><button class="button is-link" @click.prevent="submit()">Submit</button></td>
-                        <td><button class="button is-light" @click.prevent="clear()">Clear</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <add-cardio :new-cardio="newCardio" @add="add()"/>
         </div>
         <div v-if="activetab === 2">
-                    <table class="table">
-                <tbody>
-                    <tr>
-                        <th>Workout Name:</th>
-                        <td><input class="input" type="text" placeholder="Enter Workout:"></td>
-                    </tr>
-                    <tr>
-                        <th>Number of Reps:</th>
-                        <td><input class="input" type="number" placeholder="Enter Rep amount:"></td>
-                        <th>Work Set(lbs): </th>
-                        <td><input class="input" type="number" placeholder="Enter weight of set: "></td>
-                    </tr>
-                    <tr>
-                        <th>Total Time: </th>
-                        <td><input class="input" type="number" placeholder="Enter Time Lapsed:" v-model="time"></td>
-                    </tr>
-                    <tr>
-                        <th>Notes:</th>
-                        <td>
-                            <textarea class="textarea is-link" placeholder="Enter Notes:" rows="5"></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><button class="button is-link" @click.prevent="submit()">Submit</button></td>
-                        <td><button class="button is-light" @click.prevent="clear()">Clear</button></td>
-                    </tr>
-                </tbody>
-            </table>
+            <add-weight :new-weight="newWeight" @add="add()"/>
         </div>
     </section>
 </template>
 
 <script>
+import { Add} from "../services/workout";
+import AddCardio from "../components/addCardio.vue";
+import AddWeight from "../components/addWeight.vue";
 import Session from "../services/session";
 export default {
+    components :{
+        AddCardio,
+        AddWeight
+    },
     data: ()=>({
         activetab: 1,
         email: null,
         password: null,
         Session,
-        calories:'',
-        workout: '',
-        time: '',
     }),
     methods: {
         login(){
             this.Session.Login(this.email, this.password);
-        },
-        clear(){
-            this.calories='';
-            this.workout='';
-            this.time='';
         },
         submit(){
             this.$oruga.notification.open({
