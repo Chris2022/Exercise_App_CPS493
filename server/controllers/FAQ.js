@@ -8,6 +8,7 @@ app
     model.GetAll()
     .then(user=>{ 
         res.send(user);
+        console.log(user)
     })
     .catch(next) 
 })
