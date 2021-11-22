@@ -1,5 +1,5 @@
 const express = require("express");
-const model = require("../models/reviews");
+const model = require("../models/FAQ");
 
 const app = express.Router();
 
@@ -8,7 +8,6 @@ app
     model.GetAll()
     .then(user=>{ 
         res.send(user);
-        console.log(user);
     })
     .catch(next) 
 })

@@ -53,45 +53,39 @@
         </p>
     </h2><br>
     <h1 class="title"><span class="icon-text has-text-link"><i class="fas fa-comments"></i></span>   Reviews</h1>
-    <h2 class="subtitle">
-         Here is what people have to say about Fit-Bud!</h2>
-    <div class="box">
-      <span class="icon-text has-text-warning">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i></span>
-      <p>"Fit-Bud is so easy to use!"</p>
+    <h2 class="subtitle">Here is what people have to say about Fit-Bud!</h2>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third" v-for="rev in reviews" :key="rev">
+          <div class="card">
+            <div class="card-content">
+              <p class="title">{{rev.title}}</p>
+              <p class="answer">{{rev.review}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-       <div class="box">
-     <span class="icon-text has-text-warning">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i></span>
-      <p>"Awesome app to keep track of ur daily routines.. Love it!!"</p>
-    </div>
-       <div class="box">
-      <span class="icon-text has-text-warning">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i></span>
-      <p>"I love it! Easy to use in the gym during workouts without slowing me down. 
-        Powerful data capture and access for analysis. It works perfectly."</p>
-    </div>
+
 </section>
 </template>
 
 <script>
+import {  GetAll } from "../services/reviews"
 export default {
-
+    data() {
+        return {
+            reviews: []
+        }
+    },
+    async mounted(){
+        this.reviews = await GetAll();
+    }
 }
 </script>
 
 <style>
-
+.columns{
+  flex-wrap: wrap;
+}
 </style>

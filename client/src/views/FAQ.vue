@@ -7,8 +7,8 @@
         <div class="column is-one-third" v-for="faq in faqs" :key="faq">
           <div class="card">
             <div class="card-content">
-              <p class="title">{{faq.title}}</p>
-              <p class="answer">{{faq.review}}</p>
+              <p class="title">{{faq.question}}</p>
+              <p class="answer">{{faq.answer}}</p>
             </div>
           </div>
         </div>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {  GetAll } from "../services/reviews"
+import {  GetAll } from "../services/FAQ"
 export default {
     data() {
         return {
