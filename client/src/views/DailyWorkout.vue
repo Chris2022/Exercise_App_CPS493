@@ -60,32 +60,26 @@ export default {
       CAL: "",
       TIME: "",
       DISTANCE: "",
-      newCardio: { name: "", distance: "", calories: "", time: "", handle: "" },
-      newWeight: {
-        workout_name: " ",
-        rep: " ",
-        set: " ",
-        time_taken: " ",
-        notes: " ",
-        handle: " ",
-      },
+      newCardio: ({ name: "", distance: "", calories: "", time: "", handle: "" }),
+      newWeight: ({workout_name: " ",rep: " ",set: " ",time_taken: " ",notes: " ",handle: " ",}),
     };
   },
   async mounted() {
-    const  hand = session.user.handle;
+
     if (this.activetab === 1) {
       this.newCardio.name = this.NAME;
       this.newCardio.distance = this.DISTANCE;
       this.newCardio.calories = this.CAL;
       this.newCardio.time = this.TIME;
-      this.newCardio.handle = hand;
-    } else if (this.activetab === 2) {
+      this.newCardio.handle = session.user.handle;
+    }
+    if (this.activetab === 2) {
+      this.newWeight.handle = session.user.handle;
       this.newWeight.workout_name = this.LABEL;
       this.newWeight.rep = this.REP;
       this.newWeight.set = this.SET;
       this.newWeight.time_taken = this.TIME_TAKEN;
       this.newWeight.notes = this.NOTES;
-      this.newWeight.handle = hand;
     } else {
       console.log("ERRRRRR");
     }
