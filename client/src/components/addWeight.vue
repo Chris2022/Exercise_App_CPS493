@@ -54,7 +54,7 @@
             </button>
           </td>
           <td>
-            <button class="button is-light" @click.prevent="clear()" type="reset">
+            <button class="button is-light" type="reset">
               Clear
             </button>
           </td>

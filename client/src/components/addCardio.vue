@@ -1,66 +1,66 @@
 <template>
   <div class="box">
-    <table class="table">
-      <tbody>
-        <tr>
-          <th>Enter a workout:</th>
-          <td>
+    <form class="card" @submit.prevent="$emit('add')">
+      <div class="box">
+        <div class="field">
+          <div class="control">
+            <label class="label">Enter a workout: </label>
             <input
               class="input"
               type="text"
-              placeholder="Enter Workout: "
+              placeholder="Enter the name of the workout"
               v-model="cardio.name"
             />
-          </td>
-          <th>Calories Burned:</th>
-          <td>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label">Enter number of calories burned: </label>
             <input
               class="input"
-              type="number"
-              placeholder="Enter Calorie Amount:"
+              placeholder="Enter Calories Burned:"
               v-model="cardio.calories"
             />
-          </td>
-          <th>Total Time:</th>
-          <td>
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label">Enter Time Lapsed (Minutes): </label>
             <input
               class="input"
-              type="number"
               placeholder="Enter Time Lapsed:"
               v-model="cardio.time"
             />
-          </td>
-          <td>
-            <button class="button is-link" @submit.prevent="$emit('add')">
-              Submit
-            </button>
-          </td>
-          <td>
-            <button class="button is-light" @click.prevent="clear()" type="reset">
-              Clear
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </div>
+        <div class="field is-grouped" id="buttons">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light" type="reset">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </template>
 
 <script>
 export default {
-    props :{
-        newCardio: Object
+  props: {
+    newCardio: Object,
+  },
+  data() {
+    return {
+      cardio: this.newCardio,
+    };
+  },
+  watch: {
+    newCardio() {
+      this.cardio = this.newCardio;
     },
-    data (){
-        return{
-            cardio : this.newCardio
-        }
-    },
-    watch: {
-        newReview(){
-            this.cardio = this.newCardio;
-        }
-    }
+  },
 };
 </script>
 
