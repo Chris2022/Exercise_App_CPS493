@@ -7,6 +7,9 @@
       reaching your goal! You can either log in a cardio workout or a weight
       workout!
     </h2>
+    <div class="box">
+      <h2 class="subtitle">View what your friends are doing <router-link to="/share">here</router-link></h2>
+    </div>
     <div id="tabs-with-content">
       <div class="hero-foot">
         <div class="tabs is-centered is-toggled is-fullwidth">
@@ -25,6 +28,7 @@
     </div>
     <div v-if="activetab === 1">
       <add-cardio :new-cardio="newCardio" @add="add()" />
+
     </div>
     <div v-if="activetab === 2">
       <add-weight :new-weight="newWeight" @add="add()" />
@@ -51,6 +55,7 @@ export default {
       email: null,
       password: null,
       session,
+      DATE: "",
       LABEL: "",
       REP: " ",
       SET: " ",
@@ -60,17 +65,18 @@ export default {
       CAL: "",
       TIME: "",
       DISTANCE: "",
-      newCardio: ({ name: "", distance: "", calories: "", time: "", handle: "" }),
+      newCardio: ({ name: "", distance: "", calories: "", time: "",date: "" ,handle: "" }),
       newWeight: ({workout_name: " ",rep: " ",set: " ",time_taken: " ",notes: " ",handle: " ",}),
     };
   },
-  async mounted() {
+  async mounted()  {
 
     if (this.activetab === 1) {
       this.newCardio.name = this.NAME;
       this.newCardio.distance = this.DISTANCE;
       this.newCardio.calories = this.CAL;
       this.newCardio.time = this.TIME;
+      this.newCardio.date = this.DATE;
       this.newCardio.handle = session.user.handle;
     }
     if (this.activetab === 2) {

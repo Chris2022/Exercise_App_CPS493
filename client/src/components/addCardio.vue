@@ -44,6 +44,15 @@
             />
           </div>
         </div>
+          <div class="field">
+          <div class="control">
+            <label class="label">Select Today's Date: </label>
+            <input class="input"
+              type="date"
+              v-model="cardio.date"
+            />
+          </div>
+        </div>
         <div class="field is-grouped" id="buttons">
           <div class="control">
             <button class="button is-link">Submit</button>
