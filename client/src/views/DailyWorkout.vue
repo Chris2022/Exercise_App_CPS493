@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title">Daily Workout</h1>
+    <h1 class="title animate__animated animate__bounceInLeft">Daily Workout</h1>
     <h2 class="subtitle">
       keep Track of those gains and log your daily workout here. Just input the
       required data and hit submit and bam you are another step closer to
@@ -36,41 +36,46 @@
 import { Add } from "../services/workout";
 import AddCardio from "../components/addCardio.vue";
 import AddWeight from "../components/addWeight.vue";
-import Session from "../services/session";
+import session from "../services/session";
+
+let HANDLE =  ({handle: session.user.handle}); 
 export default {
   components: {
     AddCardio,
     AddWeight,
   },
-  data: () => ({
-    activetab: 1,
-    email: null,
-    password: null,
-    Session,
-    NAME: "",
-    CAL: "",
-    TIME: "",
-    newCardio: { name: "", calories: "", time: "" },
-  }),
+  data() {
+    return{
+      activetab: 1,
+      email: null,
+      password: null,
+      session,
+      NAME: "",
+      CAL: "",
+      TIME: "",
+      DISTANCE: "",
+      newCardio: ({ name: "", distance: "", calories: "", time: "", handle:""}),
+    };
+  },
   async mounted() {
     this.newCardio.name = this.NAME;
+    this.newCardio.distance = this.DISTANCE;
     this.newCardio.calories = this.CAL;
     this.newCardio.time = this.TIME;
+    this.newCardio.handle = HANDLE.handle;
   },
   methods: {
     login() {
-      this.Session.Login(this.email, this.password);
+      this.session.Login(this.email, this.password);
     },
-    submit() {
-      this.$oruga.notification.open({
-        message: "Workout Succesfully Recorded!",
+    async add() {
+      await Add(this.newCardio);
+        this.$oruga.notification.open({
+        message: "Cardio Workout Succesfully Recorded!",
         variant: "info",
         position: "top",
         closable: true,
       });
-    },
-    async add() {
-      await Add(this.newCardio);
     },
   },
 };

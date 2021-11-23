@@ -2,18 +2,7 @@
   <div class="section">
       <h1 class="title animate__animated animate__zoomIn"> Feed Page </h1>
       <div class="columns">
-
-          
-          <!-- <div class="column">
-              <div class="card">
-                  <div class="card-content">
-                      {{newPost}}
-                  </div>
-              </div>
-          </div> -->
-           
         <div class="column is-half is-offset-one-quarter">
-            
             <post-edit :new-post="newPost" @add="add()" />
             <div class="post" v-for=" (p, i) in posts" :key="p.src">
                 <post :post="p" @remove="remove(p, i)" />

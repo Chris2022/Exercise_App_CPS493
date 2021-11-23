@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div>
     <form class="card" @submit.prevent="$emit('add')">
       <div class="box">
         <div class="field">
@@ -10,6 +10,17 @@
               type="text"
               placeholder="Enter the name of the workout"
               v-model="cardio.name"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label">Enter Distance (Miles): </label>
+            <input
+              class="input"
+              type="text"
+              placeholder="Enter the total distance: "
+              v-model="cardio.distance"
             />
           </div>
         </div>
