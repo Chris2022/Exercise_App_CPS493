@@ -5,7 +5,7 @@
         <div class="field">
           <div class="control">
             <label class="label">Enter a workout: </label>
-            <input class="input" type="text" placeholder="Enter the name of the workout" v-model="weight.workout_name"/>
+            <input class="input " type="text" placeholder="Enter the name of the workout" v-model="weight.workout_name"/>
           </div>
         </div>
         <div class="field">

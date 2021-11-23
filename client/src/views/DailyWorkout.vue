@@ -38,7 +38,8 @@ import AddCardio from "../components/addCardio.vue";
 import AddWeight from "../components/addWeight.vue";
 import session from "../services/session";
 
-const HANDLE = { handle: session.user.handle };
+//  const HANDLE = { handle: session.user.handle };
+
 export default {
   components: {
     AddCardio,
@@ -71,34 +72,40 @@ export default {
     };
   },
   async mounted() {
-    this.newCardio.name = this.NAME;
-    this.newCardio.distance = this.DISTANCE;
-    this.newCardio.calories = this.CAL;
-    this.newCardio.time = this.TIME;
-    this.newCardio.handle = HANDLE.handle;
-
-    this.newWeight.workout_name = this.LABEL;
-    this.newWeight.rep = this.REP;
-    this.newWeight.set = this.SET;
-    this.newWeight.time_taken = this.TIME_TAKEN;
-    this.newWeight.notes = this.NOTES;
-    this.newWeight.handle = this.HANDLE;
+    const  hand = session.user.handle;
+    if (this.activetab === 1) {
+      this.newCardio.name = this.NAME;
+      this.newCardio.distance = this.DISTANCE;
+      this.newCardio.calories = this.CAL;
+      this.newCardio.time = this.TIME;
+      this.newCardio.handle = hand;
+    } else if (this.activetab === 2) {
+      this.newWeight.workout_name = this.LABEL;
+      this.newWeight.rep = this.REP;
+      this.newWeight.set = this.SET;
+      this.newWeight.time_taken = this.TIME_TAKEN;
+      this.newWeight.notes = this.NOTES;
+      this.newWeight.handle = hand;
+    } else {
+      console.log("ERRRRRR");
+    }
   },
   methods: {
     login() {
       this.session.Login(this.email, this.password);
     },
     async add() {
-      const cardio = await Add(this.newCardio);
-      const weight = await Add(this.newWeight);
-      if (cardio) {
+      if (this.activetab === 1) {
+        await Add(this.newCardio);
         this.$oruga.notification.open({
           message: "Cardio Workout Succesfully Recorded!",
           variant: "info",
           position: "top",
           closable: true,
         });
-      } else if (weight) {
+      } else if (this.activetab === 2) {
+        await Add(this.newWeight);
+        console.log(this.newWeight.handle);
         this.$oruga.notification.open({
           message: "Weight Workout Succesfully Recorded!",
           variant: "info",
