@@ -8,7 +8,8 @@
       workout!
     </h2>
     <div class="box">
-      <h2 class="subtitle">View what your friends are doing <router-link to="/share">here</router-link></h2>
+      <h2 class="subtitle">View what your friends are doing <router-link to="/share">here!</router-link></h2>
+       <h2 class="subtitle">View your workouts <router-link to="/reports">here!</router-link></h2>
     </div>
     <div id="tabs-with-content">
       <div class="hero-foot">
