@@ -1,3 +1,4 @@
+const Users = require( "./users");
 const bcrypt = require('bcrypt');
 const { ObjectId } = require('bson');
 const { client } = require('./mongo');
@@ -14,3 +15,17 @@ module.exports.Add = async function Add(Workout) {
 
     return { ...Workout };
 }
+
+module.exports.GetFeed = async function (handle) {
+    const user = await Users.collection.findOne({handle});
+    if(!user){
+        throw { code: 404, msg: 'No such user'};
+    }
+    const targets = user.following.filter(x=> x.isApproved).map(x=> x.handle).concat(handle)
+    const query = collection.aggregate([
+        {$match: { user_handle: {$in: targets} } },
+     // @ts-ignore
+     ].concat(addOwnerPipeline));
+    return query.toArray();
+}
+module.exports.GetByHandle = (handle) => collection.findOne({ handle }).then(x=> ({ ...x, password: undefined }));

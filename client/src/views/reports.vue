@@ -41,16 +41,14 @@
 </template>
 
 <script>
-import { GetAll } from "../services/workout";
-
+import { GetByHandle } from "../services/workout";
+import session from "../services/session";
 export default {
-  data() {
-    return {
-      list: [],
-    };
-  },
+    data: ()=> ({
+        list: [],
+    }),
   async mounted() {
-    this.list = await GetAll();
+      this.list = await GetByHandle(session.user.handle);
   },
 };
 </script>

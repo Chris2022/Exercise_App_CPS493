@@ -6,3 +6,9 @@ export function GetAll() {
 export function Add(work) {
     return api('workout', work);
 }
+export function GetFeed(handle) { 
+    return api('/workout/feed' + handle);   
+}
+export function GetByHandle(handle) { 
+    return  api('workout/byhandle/' + handle); 
+} 
