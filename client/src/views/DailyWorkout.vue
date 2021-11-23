@@ -38,23 +38,36 @@ import AddCardio from "../components/addCardio.vue";
 import AddWeight from "../components/addWeight.vue";
 import session from "../services/session";
 
-let HANDLE =  ({handle: session.user.handle}); 
+let HANDLE = { handle: session.user.handle };
 export default {
   components: {
     AddCardio,
     AddWeight,
   },
   data() {
-    return{
+    return {
       activetab: 1,
       email: null,
       password: null,
       session,
+      LABEL: "",
+      REP: " ",
+      SET: " ",
+      TIME_TAKEN: " ",
+      NOTES: " ",
       NAME: "",
       CAL: "",
       TIME: "",
       DISTANCE: "",
-      newCardio: ({ name: "", distance: "", calories: "", time: "", handle:""}),
+      newCardio: { name: "", distance: "", calories: "", time: "", handle: "" },
+      newWeight: {
+        workout_name: " ",
+        rep: " ",
+        set: " ",
+        time_taken: " ",
+        notes: " ",
+        handle: " ",
+      },
     };
   },
   async mounted() {
@@ -63,19 +76,43 @@ export default {
     this.newCardio.calories = this.CAL;
     this.newCardio.time = this.TIME;
     this.newCardio.handle = HANDLE.handle;
+
+    this.newWeight.workout_name = this.LABEL;
+    this.newWeight.rep = this.REP;
+    this.newWeight.set = this.SET;
+    this.newWeight.time_taken = this.TIME_TAKEN;
+    this.newWeight.notes = this.NOTES;
+    this.newWeight.handle = this.HANDLE;
   },
   methods: {
     login() {
       this.session.Login(this.email, this.password);
     },
     async add() {
-      await Add(this.newCardio);
+      const cardio = await Add(this.newCardio);
+      const weight = await Add(this.newWeight);
+      if (cardio) {
         this.$oruga.notification.open({
-        message: "Cardio Workout Succesfully Recorded!",
-        variant: "info",
-        position: "top",
-        closable: true,
-      });
+          message: "Cardio Workout Succesfully Recorded!",
+          variant: "info",
+          position: "top",
+          closable: true,
+        });
+      } else if (weight) {
+        this.$oruga.notification.open({
+          message: "Weight Workout Succesfully Recorded!",
+          variant: "info",
+          position: "top",
+          closable: true,
+        });
+      } else {
+        this.$oruga.notification.open({
+          message: "Error, workout not recorded ! Please try again later!",
+          variant: "danger",
+          position: "top",
+          closable: true,
+        });
+      }
     },
   },
 };
