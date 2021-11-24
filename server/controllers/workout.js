@@ -12,7 +12,7 @@ app
     })
     .catch(next) 
 })
-.get("/reports/:handle", (req, res, next) =>{
+.get("/:handle", (req, res, next) =>{
     model   .GetFeed(req.params.handle)
             .then( x=> res.send(x))
             .catch(next)    

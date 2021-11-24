@@ -43,7 +43,6 @@ import AddCardio from "../components/addCardio.vue";
 import AddWeight from "../components/addWeight.vue";
 import session from "../services/session";
 
-//  const HANDLE = { handle: session.user.handle };
 
 export default {
   components: {

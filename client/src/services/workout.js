@@ -7,5 +7,5 @@ export function Add(work) {
     return api('workout', work);
 }
 export function GetFeed(handle) { 
-    return api('/reports/feed' + handle);   
+    return api('/reports/' + handle);   
 }
