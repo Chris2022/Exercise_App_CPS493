@@ -122,6 +122,11 @@ const routes = [
     name: 'share',
     component: () => import(/* webpackChunkName: "admin" */ '../views/share.vue')
   },
+  {
+    path: '/edit',
+    name: 'edit',
+    component: () => import(/* webpackChunkName: "admin" */ '../views/edit.vue')
+  },
   
 ]
 
