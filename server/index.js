@@ -8,6 +8,7 @@ const FAQController = require('./controllers/FAQ');
 const ReviewController = require('./controllers/reviews');
 const WorkoutController = require('./controllers/workout');
 const ContactController = require('./controllers/Contact');
+const AccountController = require('./controllers/account');
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -35,6 +36,7 @@ app
     .use('/reviews', ReviewController)
     .use('/workout', WorkoutController)
     .use('/contact', ContactController)
+    .use('/account', AccountController )
 
 app
     .get('*', (req, res) => res.sendFile(path.join(__dirname, '../docs/index.html')) )

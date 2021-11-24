@@ -6,12 +6,19 @@ import Friends from '../views/Friends.vue';
 import Progress from '../views/Progress.vue';
 import calories from '../views/calories.vue';
 import DailyWorkout from '../views/DailyWorkout.vue';
+import Account from '../views/account.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/account',
+    name: 'account',
+    component: Account,
+    meta : {requiresLogin: true}
   },
   {
     path: '/Progress',

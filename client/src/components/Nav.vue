@@ -74,6 +74,9 @@
                             More
                         </a>
                         <div class="navbar-dropdown" id="hidden-mobile-journal">
+                            <router-link class="navbar-item is-tab" to="/account" active-class="is-active">
+                                Account Settings
+                            </router-link>
                              <router-link class="navbar-item is-tab" to="/about" active-class="is-active">
                                 About
                             </router-link>
