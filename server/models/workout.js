@@ -12,7 +12,6 @@ module.exports.GetAll = function GetAll() { return collection.find().toArray() ;
 module.exports.Add = async function Add(Workout) {
     const response = await collection.insertOne(Workout);
     Workout.id = response.insertedId;
-
     return { ...Workout };
 }
 module.exports.GetByHandle = (handle) => collection.find({handle}).toArray();
