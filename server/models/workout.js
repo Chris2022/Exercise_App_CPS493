@@ -15,6 +15,7 @@ module.exports.Add = async function Add(Workout) {
 
     return { ...Workout };
 }
+module.exports.GetByHandle = (handle) => collection.find({handle}).toArray();
 
 module.exports.GetFeed = async function (handle) {
     const user = await Users.collection.findOne({handle});
@@ -29,4 +30,3 @@ module.exports.GetFeed = async function (handle) {
      ].concat(addOwnerPipeline));
     return query.toArray();
 }
-module.exports.GetByHandle = (handle) => collection.findOne({ handle }).then(x=> ({ ...x, password: undefined }));

@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { GetFeed} from "../services/workout";
+import { GetByHandle} from "../services/workout";
 import session from "../services/session";
 
 export default {
@@ -51,7 +51,7 @@ export default {
         }
     },
   async mounted() {
-      this.list = await GetFeed(session.user.handle);
+      this.list = await GetByHandle(session.user.handle);
   },
 };
 </script>
