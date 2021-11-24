@@ -4,20 +4,36 @@
     <h2 class="subtitle">Here you can view your profile and update!</h2>
 
     <div class="box">
-      <table class="table is-striped">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Handle</th>
-          <th>Profile Pic</th>
-          <th>Email</th>
+      <table class="table is-striped is-fullwidth">
+        <tr v-for="(value, name) in list" :key="name">
+          <td v-if="name === 'firstName'">
+            <h2 class="subtitle"><strong>First Name:</strong> {{ value }}</h2>
+          </td>
         </tr>
         <tr v-for="(value, name) in list" :key="name">
-          <td v-if="name === 'firstName'">{{ value }}</td>
-          <td v-if="name === 'lastName'">{{ value }}</td>
-          <td v-if="name === 'handle'">{{ value }}</td>
-          <td v-if="name === 'pic'">{{ value }}</td>
-          <td v-if="name === 'emails'">{{ value[0] }}</td>
+          <td v-if="name === 'lastName'">
+            <h2 class="subtitle"><strong> Last Name:</strong> {{ value }}</h2>
+          </td>
+        </tr>
+        <tr v-for="(value, name) in list" :key="name">
+          <td v-if="name === 'handle'">
+            <h2 class="subtitle"><strong>Handle: </strong> {{ value }}</h2>
+          </td>
+        </tr>
+        <tr v-for="(value, name) in list" :key="name">
+          <td v-if="name === 'pic'">
+            <h2 class="subtitle">
+              <strong>Picture:</strong>
+              <figure class="image is-48x48">
+                <img :src="value" class="is-rounded"/>
+              </figure>
+            </h2>
+          </td>
+        </tr>
+        <tr v-for="(value, name) in list" :key="name">
+          <td v-if="name === 'emails'">
+            <h2 class="subtitle"><strong>Email:</strong> {{ value[0] }}</h2>
+          </td>
         </tr>
       </table>
     </div>
@@ -40,4 +56,6 @@ export default {
 </script>
 
 <style>
+table {border-collapse: collapse;}
+td    {padding: 6px;}
 </style>
