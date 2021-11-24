@@ -34,7 +34,7 @@ app
     .use('/posts', postsController)
     .use('/FAQ', FAQController)
     .use('/reviews', ReviewController)
-    .use('/workout', WorkoutController)
+    .use('/reports', WorkoutController)
     .use('/contact', ContactController)
     .use('/account', AccountController )
 

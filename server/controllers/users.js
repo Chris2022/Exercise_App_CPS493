@@ -16,6 +16,7 @@ app
         model.Get(req.params.user_id)
            .then(user=>{ 
                res.send(user);
+
            })
            .catch(next) 
    })

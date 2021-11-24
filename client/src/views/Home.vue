@@ -10,19 +10,6 @@
             <strong>Log </strong>activities<br> 
             All possible with <strong>Fit Bud</strong>.
         </h2><br>
-        <!-- <div class="slider-frame">
-            <div class="slider-images">
-                <figure class="img-container">
-                    <img src="../assets/HealthyFood.jpeg" alt="Healthy Foods">
-                </figure>
-                <figure class="img-container">
-                    <img src="../assets/Friends.png" alt="View or Discover New Friends!">
-                </figure>
-                <figure class="img-container">
-                    <img src="../assets/Journal.png" alt="Log Your Workouts">
-                </figure>
-            </div>
-        </div> -->
         <figure>
             <img src="https://media.istockphoto.com/photos/calories-counting-diet-food-control-and-weight-loss-concept-calorie-picture-id1259984250?b=1&k=20&m=1259984250&s=170667a&w=0&h=vGSS9ZnaRPgR90BCxVz_mgWePp9cfwH6U1KAu1_as-c=" width="1000" height="1000" class="center" alt="picture of food">
         </figure>

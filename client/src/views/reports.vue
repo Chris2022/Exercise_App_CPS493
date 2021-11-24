@@ -4,7 +4,7 @@
     <h2 class="subtitle">View your workout history here!</h2>
     <div class="columns">
       <div class="column is-half is-offset-one-quarter">
-        <div v-for="p in list" :key="p.handle">
+        <div v-for="p in list" :key="p">
           <div class="card-content">
             <div class="media">
               <div class="media-left">
@@ -41,12 +41,13 @@
 </template>
 
 <script>
-import { GetFeed } from "../services/workout";
+import { GetFeed} from "../services/workout";
 import session from "../services/session";
+
 export default {
     data (){
         return {
-            list : []
+            list : [],
         }
     },
   async mounted() {

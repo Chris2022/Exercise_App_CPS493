@@ -7,12 +7,19 @@ import Progress from '../views/Progress.vue';
 import calories from '../views/calories.vue';
 import DailyWorkout from '../views/DailyWorkout.vue';
 import Account from '../views/account.vue';
+import Report from '../views/reports';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/reports',
+    name: 'reports',
+    component: Report,
+    meta: {requiresLogin:true}
   },
   {
     path: '/account',
@@ -114,11 +121,6 @@ const routes = [
     path: '/share',
     name: 'share',
     component: () => import(/* webpackChunkName: "admin" */ '../views/share.vue')
-  },
-  {
-    path: '/reports',
-    name: 'reports',
-    component: () => import(/* webpackChunkName: "admin" */ '../views/reports.vue')
   },
   
 ]

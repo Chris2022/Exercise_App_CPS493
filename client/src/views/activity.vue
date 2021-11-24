@@ -33,6 +33,7 @@ export default {
         newPost: newPost()
     }),
     async mounted(){
+        console.log(session.user.handle);
         this.posts = await GetFeed(session.user.handle)
     },
     methods: {

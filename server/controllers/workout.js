@@ -12,9 +12,9 @@ app
     })
     .catch(next) 
 })
-.get("/workout/:handle", (req, res, next) =>{
+.get("/reports/:handle", (req, res, next) =>{
     model   .GetFeed(req.params.handle)
-            .then( x=> res.send(x) )
+            .then( x=> res.send(x))
             .catch(next)    
 })
 .post("/", (req, res, next) =>{
@@ -26,7 +26,6 @@ app
     model.GetByHandle(req.params.handle)
         .then(user=>{ 
             res.send(user);
-            console.log(user);
         })
         .catch(next) 
 })

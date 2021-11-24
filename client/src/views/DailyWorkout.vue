@@ -80,7 +80,7 @@ export default {
       this.newCardio.date = this.DATE;
       this.newCardio.handle = session.user.handle;
     }
-    if (this.activetab === 2) {
+    else if (this.activetab === 2) {
       this.newWeight.handle = session.user.handle;
       this.newWeight.workout_name = this.LABEL;
       this.newWeight.rep = this.REP;
@@ -88,7 +88,7 @@ export default {
       this.newWeight.time_taken = this.TIME_TAKEN;
       this.newWeight.notes = this.NOTES;
     } else {
-      console.log("ERRRRRR");
+      console.log("THIS IS THE USER" + session.user.handle);
     }
   },
   methods: {

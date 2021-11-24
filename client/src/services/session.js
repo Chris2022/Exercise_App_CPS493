@@ -11,6 +11,7 @@ const session = {
         try {
             const response = await Login(handle, password);
             this.user = response.user;
+            console.log(this.user);
             router.push(this.toRoute);
         } catch (error) {
             this.Error(error);

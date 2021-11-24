@@ -18,6 +18,7 @@ module.exports.Add = async function Add(Workout) {
 
 module.exports.GetFeed = async function (handle) {
     const user = await Users.collection.findOne({handle});
+    console.log(user);
     if(!user){
         throw { code: 404, msg: 'No such user'};
     }
