@@ -8,6 +8,7 @@ app
     model.Get(req.params.user_id)
        .then(user=>{ 
            res.send(user);
+           console.log(user);
        })
        .catch(next) 
 })
