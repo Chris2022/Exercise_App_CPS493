@@ -10,24 +10,24 @@
         <thead>
           <tr v-for="(value, name) in list" :key="name">
             <td v-if="name === 'firstName'">
-              <h2 class="subtitle"><router-link to="/edit"> <i class="fas fa-edit"></i></router-link><strong>First Name:</strong> 
+              <h2 class="subtitle"><router-link to="/editFirst"> <i class="fas fa-edit"></i></router-link><strong>First Name:</strong> 
               {{ value }}
               </h2>
             </td>
           </tr>
           <tr v-for="(value, name) in list" :key="name">
             <td v-if="name === 'lastName'">
-              <h2 class="subtitle"><router-link to="/edit"> <i class="fas fa-edit"></i></router-link><strong> Last Name:</strong> {{ value }}</h2>
+              <h2 class="subtitle"><router-link to="/editLast"> <i class="fas fa-edit"></i></router-link><strong> Last Name:</strong> {{ value }}</h2>
             </td>
           </tr>
           <tr v-for="(value, name) in list" :key="name">
             <td v-if="name === 'handle'">
-              <h2 class="subtitle"><router-link to="/edit"> <i class="fas fa-edit"></i></router-link><strong>Handle: </strong> {{ value }}</h2>
+              <h2 class="subtitle"><router-link to="/editHandle"> <i class="fas fa-edit"></i></router-link><strong>Handle: </strong> {{ value }}</h2>
             </td>
           </tr>
           <tr v-for="(value, name) in list" :key="name">
             <td v-if="name === 'pic'">
-              <h2 class="subtitle"><router-link to="/edit"> <i class="fas fa-edit"></i></router-link>
+              <h2 class="subtitle"><router-link to="/editPic"> <i class="fas fa-edit"></i></router-link>
                 <strong>Picture:</strong>
                 <figure class="image is-48x48">
                   <img :src="value" class="is-rounded" />
@@ -37,7 +37,7 @@
           </tr>
           <tr v-for="(value, name) in list" :key="name">
             <td v-if="name === 'emails'">
-              <h2 class="subtitle"><router-link to="/edit"> <i class="fas fa-edit"></i></router-link><strong>Email:</strong> {{ value[0] }}</h2>
+              <h2 class="subtitle"><router-link to="/editEmail"> <i class="fas fa-edit"></i></router-link><strong>Email:</strong> {{ value[0] }}</h2>
             </td>
           </tr>
         </thead>
