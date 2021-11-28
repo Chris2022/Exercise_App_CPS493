@@ -8,11 +8,6 @@ import calories from '../views/calories.vue';
 import DailyWorkout from '../views/DailyWorkout.vue';
 import Account from '../views/account.vue';
 import Report from '../views/reports';
-import FirstName from '../views/editFirst.vue';
-import LastName from '../views/editLast.vue';
-import Handle from '../views/editHandle.vue';
-import pic from '../views/editPic.vue';
-import email from '../views/editEmail.vue';
 
 const routes = [
   {
@@ -61,36 +56,6 @@ const routes = [
     name: 'Friends',
     component: Friends,
     meta: { requiresLogin: true }
-  },
-  {
-    path: '/editFirst',
-    name: 'editFirst',
-    component: FirstName,
-    meta: {requiresLogin: true}
-  },
-  {
-    path: '/editLast',
-    name: 'editLast',
-    component: LastName,
-    meta: {requiresLogin: true}
-  },
-  {
-    path: '/editHandle',
-    name: 'editHandle',
-    component: Handle,
-    meta: {requiresLogin: true}
-  },
-  {
-    path: '/editPic',
-    name: 'editPic',
-    component: pic,
-    meta: {requiresLogin: true}
-  },
-  {
-    path: '/editEmail',
-    name: 'editEmail',
-    component: email,
-    meta: {requiresLogin: true}
   },
   {
     path: '/about',
@@ -156,11 +121,6 @@ const routes = [
     path: '/share',
     name: 'share',
     component: () => import(/* webpackChunkName: "admin" */ '../views/share.vue')
-  },
-  {
-    path: '/edit',
-    name: 'edit',
-    component: () => import(/* webpackChunkName: "admin" */ '../views/editFirst.vue')
   },
   
 ]

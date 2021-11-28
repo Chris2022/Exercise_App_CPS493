@@ -12,5 +12,12 @@ app
        })
        .catch(next) 
 })
+.patch("/:user_id", (req, res, next) =>{
+
+    model   .Update(req.params.user_id, req.body)
+            .then( user=> res.send(user) )
+            .catch(next) 
+
+})
 
 module.exports = app;
