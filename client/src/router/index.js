@@ -8,8 +8,15 @@ import calories from '../views/calories.vue';
 import DailyWorkout from '../views/DailyWorkout.vue';
 import Account from '../views/account.vue';
 import Report from '../views/reports';
+import foods from '../views/foods';
 
 const routes = [
+  {
+    path:'/foods',
+    name: 'foods',
+    component: foods,
+    meta : {requiresLogin:true}
+  },
   {
     path: '/',
     name: 'Home',

@@ -10,6 +10,7 @@ const WorkoutController = require('./controllers/workout');
 const ContactController = require('./controllers/Contact');
 const AccountController = require('./controllers/account');
 const EditController = require('./controllers/edit');
+const FoodController = require('./controllers/Food');
 
 const app = express()
 const port = process.env.PORT || 3000;
@@ -39,6 +40,7 @@ app
     .use('/contact', ContactController)
     .use('/account', AccountController )
     .use('/edit', EditController)
+    .use('/foods', FoodController)
 
 app
     .get('*', (req, res) => res.sendFile(path.join(__dirname, '../docs/index.html')) )
