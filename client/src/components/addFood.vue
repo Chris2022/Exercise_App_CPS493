@@ -3,13 +3,12 @@
     <div class="box">
       <div class="field">
         <div class="control">
-          <label class="label">Enter Name of Food: </label>
-          <input
-            class="input"
-            type="text"
-            placeholder="Enter the name of the food you ate: e.g (Two Eggs and Two Slices of Toast"
-            v-model="food.name"
-          />
+            <p class="content"><b>Enter Name of Food: </b> {{ selected }}</p>
+            <o-field label="Enter the name of your food">
+            <o-autocomplete  v-model="name" :data="filteredDataArray" placeholder="e.g. Two eggs and Toast" icon="search" clearable @select="option => selected = option">
+             <template slot:empty>No results found</template>
+            </o-autocomplete>
+            </o-field>
         </div>
       </div>
       <div class="field">
@@ -60,8 +59,23 @@ export default {
   data() {
     return {
       food: this.newFood,
+      data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
+      name: '',
+      selected: null,
     };
   },
+  computed: {
+      filteredDataArray() {
+        return this.data.filter(option => {
+          return (
+            option
+              .toString()
+              .toLowerCase()
+              .indexOf(this.name.toLowerCase()) >= 0
+          )
+        })
+      }
+    },
   watch: {
     newFood() {
       this.food = this.newFood;

@@ -5,31 +5,55 @@
         <div class="field">
           <div class="control">
             <label class="label">Enter a workout: </label>
-            <input class="input " type="text" placeholder="Enter the name of the workout" v-model="weight.workout_name"/>
+            <input
+              class="input"
+              type="text"
+              placeholder="Enter the name of the workout"
+              v-model="weight.workout_name"
+            />
           </div>
         </div>
         <div class="field">
           <div class="control">
             <label class="label">Number of Reps: </label>
-            <input class="input" type="number" placeholder="Enter Rep Amount: " v-model="weight.rep"/>
+            <input
+              class="input"
+              type="number"
+              placeholder="Enter Rep Amount: "
+              v-model="weight.rep"
+            />
           </div>
         </div>
         <div class="field">
           <div class="control">
             <label class="label">Weight of Set (lbs): </label>
-            <input class="input" type="number" placeholder="Enter the weight at which you are doing the set: " v-model="weight.set"/>
+            <input
+              class="input"
+              type="number"
+              placeholder="Enter the weight at which you are doing the set: "
+              v-model="weight.set"
+            />
           </div>
         </div>
         <div class="field">
           <div class="control">
             <label class="label">Enter Time Lapsed (Minutes): </label>
-            <input class="input" placeholder="Enter Time Lapsed:" v-model="weight.time_taken"/>
+            <input
+              class="input"
+              placeholder="Enter Time Lapsed:"
+              v-model="weight.time_taken"
+            />
           </div>
         </div>
         <div class="field">
           <div class="control">
             <label class="label">Notes : </label>
-            <textarea class="textarea" placeholder="Enter any notes you may have" rows="5" v-model="weight.notes"></textarea>
+            <textarea
+              class="textarea"
+              placeholder="Enter any notes you may have"
+              rows="5"
+              v-model="weight.notes"
+            ></textarea>
           </div>
         </div>
         <div class="field is-grouped" id="buttons">
