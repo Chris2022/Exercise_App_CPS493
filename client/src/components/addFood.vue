@@ -6,7 +6,6 @@
             <p class="content"><b>Enter Name of Food: </b> {{ selected }}</p>
             <o-field label="Enter the name of your food">
             <o-autocomplete  v-model="name" :data="filteredDataArray" placeholder="e.g. Two eggs and Toast" icon="search" clearable @select="option => selected = option">
-             <template slot:empty>No results found</template>
             </o-autocomplete>
             </o-field>
         </div>
@@ -52,17 +51,22 @@
 </template>
 
 <script>
+import {  GetAll } from "../services/foods";
 export default {
   props: {
     newFood: Object,
   },
   data() {
     return {
+      dater : [],
       food: this.newFood,
       data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
       name: '',
       selected: null,
     };
+  },
+  async mounted(){
+    this.dater = await GetAll();
   },
   computed: {
       filteredDataArray() {
