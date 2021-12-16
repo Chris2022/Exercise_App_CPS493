@@ -4,3 +4,6 @@ import { api } from "./myFetch";
 export function GetAll() {
     return api('foo');
 }
+export function GetFood() {
+    return api('foo');
+}

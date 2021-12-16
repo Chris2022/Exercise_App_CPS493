@@ -11,5 +11,12 @@ app
     })
     .catch(next) 
 })
+.get("/", (req, res, next) =>{
+    model.GetFood()
+    .then(user=>{ 
+        res.send(user);
+    })
+    .catch(next) 
+})
 
 module.exports = app;
